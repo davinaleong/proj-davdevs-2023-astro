@@ -1,0 +1,89 @@
+// A. Fonts
+
+// A.1. Nunito
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  src: url("./fonts/nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Nunito;
+  font-style: italic;
+  src: url("./fonts/nunito/Nunito-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: Nunito;
+  font-style: oblique;
+  src: url("./fonts/nunito/Nunito-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+// A.2. Montserrat
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  src: url("./fonts/montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: italic;
+  src: url("./fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: oblique;
+  src: url("./fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+// A.3. Anonymous Pro
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./fonts/anonymous-pro/AnonymousPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: 400;
+  font-style: italic;
+  src: url("./fonts/anonymous-pro/AnonymousPro-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: 400;
+  font-style: oblique;
+  src: url("./fonts/anonymous-pro/AnonymousPro-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./fonts/anonymous-pro/AnonymousPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: 700;
+  font-style: italic;
+  src: url("./fonts/anonymous-pro/AnonymousPro-BoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  font-weight: 700;
+  font-style: oblique;
+  src: url("./fonts/anonymous-pro/AnonymousPro-BoldItalic.ttf")
+    format("truetype");
+}
