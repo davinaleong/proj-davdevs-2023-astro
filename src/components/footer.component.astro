@@ -1,0 +1,110 @@
+---
+import dayjs from "dayjs"
+
+const {
+    meta_title = "",
+    meta_author = ""
+} = Astro.props
+
+const releasedAt = import.meta.env.APP_RELEASED_AT
+const releasedAtYear = Number(dayjs(releasedAt).format("YYYY"))
+const nowYear = Number(dayjs().format("YYYY"))
+
+let year = `${releasedAtYear}`
+if (nowYear > releasedAtYear) {
+    year = `${releasedAtYear} - ${nowYear}`
+}
+---
+<footer class="main-footer">
+    <div class="container">
+      <div class="main-footer-content">
+        <div class="main-footer-cell">
+          <h2 class="ff-secondary fw-regular">D/D</h2>
+
+          <nav class="main-footer-nav">
+            <ul
+              class="nav-list"
+              role="list"
+              data-element="main-footer-contact-nav"
+            >
+              <li class="nav-list-item">
+                <a
+                  href="mailto:leong.shi.yun@gmail.com"
+                  class="btn btn-footer"
+                >
+                  <i class="fa-duotone fa-envelope"></i>
+                  leong.shi.yun@gmail.com
+                </a>
+              </li>
+              <li class="nav-list-item">
+                <div class="btn btn-footer">
+                  <i class="fa-duotone fa-house"></i> West, Singapore
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ./main-footer-cell -->
+
+        <div class="main-footer-cell">
+          <h2 class="ff-secondary fw-regular">Sitemap</h2>
+
+          <nav class="main-footer-nav">
+            <ul class="nav-list" role="list">
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">Home</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">About</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">Portfolio</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">Contact</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">Try Me!</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ./main-footer-cell -->
+
+        <div class="main-footer-cell">
+          <h2 class="ff-secondary fw-regular">Social</h2>
+
+          <nav class="main-footer-nav">
+            <ul class="nav-list" role="list">
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">
+                  <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">
+                  <i class="fa-brands fa-dev"></i> DEV
+                </a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="btn btn-footer">
+                  <i class="fa-brands fa-jsfiddle"></i> JsFiddle
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="main-footer-divider"></div>
+
+      <p class="main-footer-copyright fsize-300 fs-italic ta-center">
+        {meta_title} &copy; {meta_author}, {year}
+      </p>
+    </div>
+</footer>

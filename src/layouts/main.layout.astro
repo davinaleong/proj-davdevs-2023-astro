@@ -1,0 +1,53 @@
+---
+import "./../styles/main.scss"
+import favicon from "./../styles/images/favicon-32x32.png"
+
+import HeaderAstroComponent from "./../components/header.component.astro"
+import FooterAstroComponent from "./../components/footer.component.astro"
+import ModalAstroComponent from "./../components/modal.component.astro"
+
+const response = await fetch(`${import.meta.env.API_URL}misc/apps/davdevs`)
+const data = await response.json()
+const { meta_title, meta_description, meta_author, meta_keywords, title, released_at } = data.apps[0]
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content={meta_author}/>
+    <meta name="description" content={meta_description}/>
+    <meta name="keywords" content={meta_keywords}/>
+    
+    <title>{meta_title}</title>
+
+    <link rel="icon" type="image/png" href={favicon} />
+
+    <script is:inline defer src="/scripts/main.js"></script>
+    <script
+      is:inline
+      defer
+      src="https://kit.fontawesome.com/1b82ea5cb2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="top" class="clr-gray-50 bg-gray-900">
+    <main class="content">
+      <HeaderAstroComponent />
+
+      <div class="main-content">
+        <slot />
+      </div>
+
+      <FooterAstroComponent meta_title={meta_title} meta_author={meta_author}/>
+
+      <a href="#top" class="btn btn-accent btn-top">
+        <i class="fa-solid fa-chevron-up"></i>
+        Top
+      </a>
+
+      <ModalAstroComponent />
+    </main>
+  </body>
+</html>

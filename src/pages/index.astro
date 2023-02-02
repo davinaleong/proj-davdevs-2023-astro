@@ -1,15 +1,367 @@
 ---
----
+import MainAstroLayout from "./../layouts/main.layout.astro"
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+import logo from "./../styles/images/logo-512x512.png"
+---
+<MainAstroLayout>
+	<section
+		id="home"
+		class="section section-gray-800 section-gray-800-to-gray-900"
+	>
+		<div class="section-inner container section-inner-landing-hero">
+			<div class="section-inner-landing-hero__content-cell">
+				<h1 class="ff-secondary fsize-900 fw-medium clr-yellow-500">
+				dav/devs
+				</h1>
+				<h2 class="fsize-500 fw-medium clr-yellow-300">web developer</h2>
+				<p class="fs-italic">just keep learning...</p>
+			</div>
+			<div class="section-inner-hero__icon-cell">
+				<div class="section-inner-hero__icon-cell__icon-container">
+				<img
+					src={logo}
+					alt=""
+					class="section-inner-hero__icon-cell__icon-container__icon"
+				/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		id="project-types"
+		class="section section-gray-900 section-gray-900-to-primary-200 section-reverse"
+	>
+		<div class="section-inner container">
+			<h2
+				class="ff-secondary fsize-700 fw-medium clr-yellow-500 ta-center m-b-600"
+			>
+				Types of Projects I Do
+			</h2>
+
+			<div class="project-types-grid m-b-400">
+				<div class="ta-center">
+					<i class="fa-brands fa-html5 clr-html-400 fsize-1000"></i>
+					<p>HTML/HTML5</p>
+				</div>
+
+				<div class="ta-center">
+					<i class="fa-brands fa-css3 clr-css-400 fsize-1000"></i>
+					<p>CSS/CSS3</p>
+				</div>
+
+				<div class="ta-center">
+					<i class="fa-brands fa-js clr-javascript-400 fsize-1000"></i>
+					<p>JavaScript</p>
+				</div>
+
+				<div class="ta-center">
+					<i
+						class="fa-brands fa-bootstrap clr-bootstrap-400 fsize-1000"
+					></i>
+					<p>Bootstrap</p>
+				</div>
+
+				<div class="ta-center">
+					<i class="fa-brands fa-react clr-react-400 fsize-1000"></i>
+					<p>React</p>
+				</div>
+
+				<div class="ta-center">
+					<i class="fa-brands fa-laravel clr-laravel-400 fsize-1000"></i>
+					<p>Laravel</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		id="featured-projects"
+		class="section section-primary-200 section-primary-200-to-gray-900"
+	>
+		<div class="section-inner">
+			<div class="container">
+				<h2
+				class="ff-secondary fsize-700 fw-medium clr-lime-800 ta-center m-b-600"
+				>
+				Featured Projects
+				</h2>
+			</div>
+
+			<div class="bg-lime-700 p-y-400">
+				<div class="card-carousel">
+					<div class="card card-featured">
+						<img
+						src="./images/fem-projects.jpg"
+						alt="Project Screenshot"
+						class="card-image"
+						/>
+						<div class="card-corner card-corner-top-right">
+							<i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
+						</div>
+							<div class="card-body">
+						<p class="ff-secondary fsize-600 fw-medium">
+							Project Title
+						</p>
+							<p>HTML Mircrosite</p>
+						</div>
+					</div>
+
+					<div class="card card-featured">
+						<img
+						src="./images/fem-projects.jpg"
+						alt="Project Screenshot"
+						class="card-image"
+						/>
+						<div class="card-corner card-corner-top-right">
+							<i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
+						</div>
+						<div class="card-body">
+							<p class="ff-secondary fsize-600 fw-medium">
+								Project Title
+							</p>
+							<p>HTML Mircrosite</p>
+						</div>
+					</div>
+
+					<div class="card card-featured">
+						<img
+						src="./images/fem-projects.jpg"
+						alt="Project Screenshot"
+						class="card-image"
+						/>
+						<div class="card-corner card-corner-top-right">
+							<i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
+						</div>
+						<div class="card-body">
+							<p class="ff-secondary fsize-600 fw-medium">
+								Project Title
+							</p>
+							<p>HTML Mircrosite</p>
+						</div>
+					</div>
+
+					<div class="card card-featured">
+						<img
+						src="./images/fem-projects.jpg"
+						alt="Project Screenshot"
+						class="card-image"
+						/>
+						<div class="card-corner card-corner-top-right">
+							<i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
+						</div>
+						<div class="card-body">
+							<p class="ff-secondary fsize-600 fw-medium">
+								Project Title
+							</p>
+							<p>HTML Mircrosite</p>
+						</div>
+					</div>
+				</div>
+
+				<p class="ta-center fsize-300 m-t-400">
+					<em>Scroll left and right to see more.</em>
+				</p>
+			</div>
+
+		<div class="p-y-100"></div>
+		</div>
+	</section>
+
+	<section
+		id="my-skills"
+		class="section section-gray-900 section-gray-900-to-gray-800 section-reverse"
+	>
+		<div class="section-inner container">
+			<h2
+				class="ff-secondary fsize-700 fw-medium clr-yellow-500 ta-center m-b-400"
+			>
+				The Skills I Have
+			</h2>
+
+			<div class="skills-grid m-b-600">
+				<div class="skills-cell">
+					<h3 class="fsize-600 fw-medium clr-yellow-300">Frontend</h3>
+
+					<ul class="list-style-none">
+						<li>Figma</li>
+						<li>HTML/HTML5</li>
+						<li>CSS/CSS3</li>
+						<li>JavaScript</li>
+						<li>jQuery</li>
+						<li>Bootstrap</li>
+						<li>React</li>
+						<li>Astro SSG</li>
+						<li>Responsive Web Design</li>
+					</ul>
+				</div>
+
+				<div class="skills-cell">
+					<h3 class="fsize-600 fw-medium clr-yellow-300">Backend</h3>
+
+					<ul class="list-style-none">
+						<li>PHP</li>
+						<li>Laravel</li>
+						<li>WordPress/WooCommerce</li>
+						<li>MySQL</li>
+						<li>PHPUnit</li>
+						<li>REST API</li>
+						<li>NodeJS</li>
+						<li>Sequelize</li>
+						<li>Express</li>
+						<li>GrapQL</li>
+						<li>Vite</li>
+					</ul>
+				</div>
+
+				<div class="skills-cell">
+					<h3 class="fsize-600 fw-medium clr-yellow-300">
+						DevOps/Others
+					</h3>
+
+					<ul class="list-style-none">
+						<li>Netlify</li>
+						<li>Heroku</li>
+						<li>Git/GitHub</li>
+						<li>Amazon AWS</li>
+						<li>CPanel</li>
+						<li>Docker</li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="ta-center">
+				<a href="about#all-skills" class="btn btn-accent">
+					View All <i class="fa-solid fa-chevron-right"></i>
+				</a>
+			</p>
+		</div>
+	</section>
+
+	<section
+		id="contact-us"
+		class="section section-gray-800 section-gray-800-to-gray-900"
+	>
+		<div class="section-inner container">
+		<h2
+			class="ff-secondary fsize-700 fw-medium clr-yellow-500 ta-center m-b-400"
+		>
+			Any Enquires?
+		</h2>
+
+			<form action="" method="post" class="form-grid">
+				<div class="form-group form-cell-half">
+				<label for="name" class="visually-hidden">Name</label>
+				<div class="input-group">
+					<div class="input-addon">
+					<i class="fa-duotone fa-user"></i>
+					</div>
+					<input
+					type="text"
+					name="name"
+					id="name"
+					class="form-input"
+					placeholder="Name"
+					/>
+				</div>
+				</div>
+				<div class="form-group form-cell-half">
+				<label for="email" class="visually-hidden">Email</label>
+				<div class="input-group">
+					<div class="input-addon">
+					<i class="fa-duotone fa-envelope"></i>
+					</div>
+					<input
+					type="email"
+					name="email"
+					id="email"
+					class="form-input"
+					placeholder="Email"
+					/>
+				</div>
+				</div>
+				<div class="form-group form-cell-half">
+				<label for="phone" class="visually-hidden">Phone</label>
+				<div class="input-group">
+					<div class="input-addon">
+					<i class="fa-duotone fa-phone"></i>
+					</div>
+					<input
+					type="tel"
+					name="phone"
+					id="phone"
+					class="form-input"
+					placeholder="Phone"
+					/>
+				</div>
+				</div>
+				<div class="form-group form-cell-half">
+				<label for="email" class="visually-hidden">Subject</label>
+				<div class="input-group">
+					<div class="input-addon">
+					<i class="fa-duotone fa-pen"></i>
+					</div>
+					<select name="subject" id="subject" class="form-input">
+					<option value="">Subject</option>
+					<option value="job">Hire Me?</option>
+					<option value="hangout">Have a coffee?</option>
+					</select>
+				</div>
+				</div>
+				<div class="form-group form-cell-full">
+				<label for="message" class="visually-hidden">Message</label>
+				<div class="input-group">
+					<div class="input-addon">
+					<i class="fa-duotone fa-message"></i>
+					</div>
+					<textarea
+					name="message"
+					id="message"
+					class="form-input"
+					placeholder="Message"
+					rows="4"
+					></textarea>
+				</div>
+				</div>
+				<div class="form-submit form-cell-full">
+				<button type="submit" class="btn btn-accent">
+					Send Message <i class="fa-duotone fa-paper-plane"></i>
+				</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section
+		id="additional-links"
+		class="section section-gray-900 section-gray-900-to-gray-900"
+	>
+		<div class="section-inner container">
+			<h2
+				class="ff-secondary fsize-700 fw-medium clr-yellow-500 ta-center m-b-400"
+			>
+				Additional Content
+			</h2>
+
+			<div class="additional-content-grid">
+				<a href="#" class="link-accent additional-content-cell">
+				<img
+					src="./images/fem-projects.jpg"
+					alt=""
+					class="additional-content-cell__image"
+				/>
+				<p class="additional-content-cell__content">Link Label</p>
+				</a>
+
+				<a href="#" class="link-accent additional-content-cell">
+				<img
+					src="./images/fem-projects.jpg"
+					alt=""
+					class="additional-content-cell__image"
+				/>
+				<p class="additional-content-cell__content">Link Label</p>
+				</a>
+			</div>
+		</div>
+	</section>
+</MainAstroLayout>
