@@ -1,0 +1,372 @@
+---
+import MainAstroLayout from "./../layouts/main.layout.astro"
+
+import profilePic from "./../styles/images/profile-pic.png"
+---
+
+<MainAstroLayout className="resume | clr-gray-900 bg-white">
+  <section
+    id="name"
+    class="section section-primary-200 section-primary-200-to-white"
+  >
+    <div class="section-inner container section-inner-hero">
+      <div class="section-inner-hero__content-cell">
+        <img
+          src={profilePic}
+          alt=""
+          class="section-inner-hero__content-cell__image"
+        />
+      </div>
+      <div class="section-inner-hero__content-cell">
+        <h1 class="ff-secondary fsize-800 fw-medium">Davina Leong</h1>
+        <p class="fw-medium">Web Developer, 7 years</p>
+      </div>
+      <div class="section-inner-hero__content-cell">
+        <ul class="fsize-300" role="list">
+          <li>
+            <a href="mailto:leong.shi.yun@gmail.com" class="link"
+              ><i class="fa-duotone fa-envelope"></i>
+              leong.shi.yun@gmail.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:6596393752" class="link"
+              ><i class="fa-duotone fa-phone"></i> +65 9369 3752</a
+            >
+          </li>
+          <li class="m-b-200">
+            <span class="link"
+              ><i class="fa-duotone fa-location-dot"></i> West, Singapore</span
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/davina-leong-s9115675g/"
+              target="_blank"
+              class="link"
+              ><i class="fa-brands fa-linkedin"></i>
+              linkedin.com/in/davina</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/davinaleong"
+              target="_blank"
+              class="link"
+              ><i class="fa-brands fa-github"></i>
+              github.com/davinaleong</a
+            >
+          </li>
+          <li>
+            <a href="https://dev.to/davinaleong" target="_blank" class="link"
+              ><i class="fa-brands fa-dev"></i> dev.to/davinaleong</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white section-no-decoration">
+    <div class="container section-inner | ta-center">
+      <p class="restrict-width">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil velit
+        asperiores similique laboriosam cumque alias consequatur aliquid nam,
+        blanditiis amet.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider bg-gray-400"></div>
+
+  <section id="skills" class="section section-white section-no-decoration">
+    <div class="container section-inner | ta-center">
+      <h2 class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200">
+        Skills
+      </h2>
+
+      <p class="m-b-50"><strong>Programming</strong></p>
+      <p class="fsize-300 m-b-400 restrict-width">
+        JavaScript (ES6), Astro SSG, ReactJS, JSX, GatsbyJS, Angular 2, jQuery,
+        PHP, Laravel, OpenCart, WordPress/WooCommerce, CodeIgniter, CraftCMS,
+        PHPUnit, NodeJS, Jest, Express, HTML5, CSS3, SASS, LESS, Flexbox, CSS
+        Grid, Bootstrap, Tailwind, Material UI, GraphQL, MySQL, GraphDB,
+        Elasticsearch, XML, JSON
+      </p>
+
+      <p class="m-b-50"><strong>Development</strong></p>
+      <p class="fsize-300 m-b-400 restrict-width">
+        GIT, AWS, Docker, Web Development, Unit Testing, Ionic Framework,
+        Responsive Web Design, REST API
+      </p>
+
+      <p class="m-b-50"><strong>Design</strong></p>
+      <p class="fsize-300 m-b-400 restrict-width">
+        Adobe XD, Figma, PhotoShop, Illustrator
+      </p>
+
+      <p class="m-b-50"><strong>Languages</strong></p>
+      <p class="fsize-300 restrict-width">English, Chinese (Mandrian)</p>
+    </div>
+  </section>
+
+  <div class="divider bg-gray-400"></div>
+
+  <section id="experience" class="section section-white section-no-decoration">
+    <div class="container section-inner">
+      <h2
+        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200 ta-center"
+      >
+        Experience
+      </h2>
+
+      <div class="resume-item | fsize-300 p-200">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
+          <p>
+            <strong><em>Kallang, Singapore</em></strong>
+          </p>
+          <p><em>Web Developer</em></p>
+        </div>
+        <div class="resume-item__description">
+          <ul class="p-l-400">
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              harum!
+            </li>
+            <li>
+              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
+            </li>
+            <li>
+              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
+              enim.
+            </li>
+            <li>
+              Quam perferendis suscipit a animi id soluta expedita minus harum.
+            </li>
+            <li>
+              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
+              ratione libero veritatis!
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-item | fsize-300 bg-gray-100 p-200">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
+          <p>
+            <strong><em>Kallang, Singapore</em></strong>
+          </p>
+          <p><em>Web Developer</em></p>
+        </div>
+        <div class="resume-item__description">
+          <ul class="p-l-400">
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              harum!
+            </li>
+            <li>
+              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
+            </li>
+            <li>
+              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
+              enim.
+            </li>
+            <li>
+              Quam perferendis suscipit a animi id soluta expedita minus harum.
+            </li>
+            <li>
+              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
+              ratione libero veritatis!
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-item | fsize-300 p-200">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
+          <p>
+            <strong><em>Kallang, Singapore</em></strong>
+          </p>
+          <p><em>Web Developer</em></p>
+        </div>
+        <div class="resume-item__description">
+          <ul class="p-l-400">
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              harum!
+            </li>
+            <li>
+              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
+            </li>
+            <li>
+              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
+              enim.
+            </li>
+            <li>
+              Quam perferendis suscipit a animi id soluta expedita minus harum.
+            </li>
+            <li>
+              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
+              ratione libero veritatis!
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-item | fsize-300 bg-gray-100 p-200">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
+          <p>
+            <strong><em>Kallang, Singapore</em></strong>
+          </p>
+          <p><em>Web Developer</em></p>
+        </div>
+        <div class="resume-item__description">
+          <ul class="p-l-400">
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              harum!
+            </li>
+            <li>
+              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
+            </li>
+            <li>
+              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
+              enim.
+            </li>
+            <li>
+              Quam perferendis suscipit a animi id soluta expedita minus harum.
+            </li>
+            <li>
+              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
+              ratione libero veritatis!
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-item | fsize-300 p-200">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
+          <p>
+            <strong><em>Kallang, Singapore</em></strong>
+          </p>
+          <p><em>Web Developer</em></p>
+        </div>
+        <div class="resume-item__description">
+          <ul class="p-l-400">
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              harum!
+            </li>
+            <li>
+              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
+            </li>
+            <li>
+              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
+              enim.
+            </li>
+            <li>
+              Quam perferendis suscipit a animi id soluta expedita minus harum.
+            </li>
+            <li>
+              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
+              ratione libero veritatis!
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider bg-gray-400"></div>
+
+  <section id="education" class="section section-white section-no-decoration">
+    <div class="container section-inner">
+      <h2
+        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200 ta-center"
+      >
+        Education
+      </h2>
+
+      <div class="resume-item | fsize-300 p-200">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">
+            Diploma in Information Technology
+          </h2>
+          <p>
+            <strong><em>Singapore Polytechnic, Singapore</em></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider bg-gray-400"></div>
+
+  <section
+    id="certificates"
+    class="section section-white section-no-decoration"
+  >
+    <div class="container section-inner">
+      <h2
+        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200 ta-center"
+      >
+        Certificates
+      </h2>
+
+      <div class="resume-item | fsize-300 p-200">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">Certified Scrum Master</h2>
+          <p>
+            <strong><em>Scrum Alliance</em></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="resume-item | fsize-300 p-200 bg-gray-100">
+        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
+        <div class="resume-item__heading">
+          <h2 class="ff-secondary fsize-400 fw-bold">Certified Scrum Master</h2>
+          <p>
+            <strong><em>Scrum Alliance</em></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider bg-gray-400"></div>
+
+  <section
+    id="hobbies"
+    class="section section-white section-no-decoration m-b-600"
+  >
+    <div class="container section-inner ta-center">
+      <h2 class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200">
+        Hobbies
+      </h2>
+
+      <p>
+        Spending time with Jesus,<br />
+        Programming,<br />
+        Food,<br />
+        Videogames and Boardgames,<br />
+        Gym,<br />
+        Hosting my church gathering,<br />
+        Joining tech meetups
+      </p>
+    </div>
+  </section>
+</MainAstroLayout>
