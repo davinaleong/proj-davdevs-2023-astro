@@ -63,6 +63,10 @@
   grid-template-rows: repeat(2, max-content);
   gap: var(--r-size-200);
 
+  &:nth-child(even) {
+    background-color: var(--clr-gray-100);
+  }
+
   &__description {
     grid-column: 1 / -1;
   }
