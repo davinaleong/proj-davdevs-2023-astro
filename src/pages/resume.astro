@@ -1,7 +1,8 @@
 ---
+import profilePic from "./../styles/images/profile-pic.png"
 import MainAstroLayout from "./../layouts/main.layout.astro"
 
-import profilePic from "./../styles/images/profile-pic.png"
+import * as main from "./../content/resume/main.md"
 ---
 
 <MainAstroLayout className="resume | clr-gray-900 bg-white">
@@ -18,49 +19,48 @@ import profilePic from "./../styles/images/profile-pic.png"
         />
       </div>
       <div class="section-inner-hero__content-cell">
-        <h1 class="ff-secondary fsize-800 fw-medium">Davina Leong</h1>
-        <p class="fw-medium">Web Developer, 7 years</p>
+        <h1 class="ff-secondary fsize-800 fw-medium">{main.frontmatter.name}</h1>
+        <p class="fw-medium">{main.frontmatter.subtitle}</p>
       </div>
       <div class="section-inner-hero__content-cell">
         <ul class="fsize-300" role="list">
           <li>
-            <a href="mailto:leong.shi.yun@gmail.com" class="link"
+            <a href={"mailto:" + main.frontmatter.email} class="link"
               ><i class="fa-duotone fa-envelope"></i>
-              leong.shi.yun@gmail.com</a
+              {main.frontmatter.email}</a
             >
           </li>
           <li>
-            <a href="tel:6596393752" class="link"
-              ><i class="fa-duotone fa-phone"></i> +65 9369 3752</a
+            <a href={"tel:" + main.frontmatter.phone} class="link"
+              ><i class="fa-duotone fa-phone"></i> {main.frontmatter.phone}</a
             >
           </li>
           <li class="m-b-200">
             <span class="link"
-              ><i class="fa-duotone fa-location-dot"></i> West, Singapore</span
+              ><i class="fa-duotone fa-location-dot"></i> {main.frontmatter.address}</span
             >
           </li>
 
           <li>
             <a
-              href="https://www.linkedin.com/in/davina-leong-s9115675g/"
+              href={main.frontmatter.linkedinLink}
               target="_blank"
               class="link"
               ><i class="fa-brands fa-linkedin"></i>
-              linkedin.com/in/davina</a
+              {main.frontmatter.linkedinLabel}</a
             >
           </li>
           <li>
             <a
-              href="https://github.com/davinaleong"
+              href={main.frontmatter.githubLink}
               target="_blank"
               class="link"
-              ><i class="fa-brands fa-github"></i>
-              github.com/davinaleong</a
+              ><i class="fa-brands fa-github"></i> {main.frontmatter.githubLabel}</a
             >
           </li>
           <li>
-            <a href="https://dev.to/davinaleong" target="_blank" class="link"
-              ><i class="fa-brands fa-dev"></i> dev.to/davinaleong</a
+            <a href={main.frontmatter.devLink} target="_blank" class="link"
+              ><i class="fa-brands fa-dev"></i> {main.frontmatter.devLabel}</a
             >
           </li>
         </ul>
@@ -70,14 +70,7 @@ import profilePic from "./../styles/images/profile-pic.png"
 
   <section class="section section-white section-no-decoration">
     <div class="container section-inner | ta-center">
-      <p class="restrict-width">
-        Seeking a web developer position where I can utilize my skills in HTML,
-        CSS, JS, and PHP to contribute to the design and development of
-        innovative and user-friendly websites. With 7 years of experience and a
-        track record of delivering projects on time and with high quality, I am
-        a diligent, independent, and reliable team player who is committed to
-        continuous learning and growth.
-      </p>
+      <p class="restrict-width">{main.frontmatter.introduction}</p>
     </div>
   </section>
 
@@ -394,13 +387,7 @@ import profilePic from "./../styles/images/profile-pic.png"
       </h2>
 
       <p>
-        Spending time with Jesus,<br />
-        Programming,<br />
-        Food,<br />
-        Videogames and Boardgames,<br />
-        Gym,<br />
-        Hosting my church gathering,<br />
-        Joining tech meetups
+        {main.frontmatter.hobbies.map((hobby: any) => (<>{hobby}<br/></>))}
       </p>
     </div>
   </section>

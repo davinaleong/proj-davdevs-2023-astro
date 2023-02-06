@@ -16,17 +16,16 @@ githubLink: "https://github.com/davinaleong"
 
 devLabel: "dev.to/davinaleong"
 devLink: "https://dev.to/davinaleong"
----
 
-export default description = "Seeking a web developer position where I can utilize my skills in HTML, CSS, JS, and PHP to contribute to the design and development of innovative and user-friendly websites. With 7 years of experience and a track record of delivering projects on time and with high quality, I am a diligent, independent, and reliable team player who is committed to continuous learning and growth."
+introduction: "Seeking a web developer position where I can utilize my skills in HTML, CSS, JS, and PHP to contribute to the design and development of innovative and user-friendly websites. With 7 years of experience and a track record of delivering projects on time and with high quality, I am a diligent, independent, and reliable team player who is committed to continuous learning and growth."
 
-export default hobbies = [
+hobbies: [
     "Spending time with Jesus",
     "Programming",
-    "Games (Video & Board)",
+    "Video & board games",
     "Food",
     "Gym",
-    // "Toastmasters (IT Support)",
     "Host church care group",
     "Joined tech meet ups"
 ]
+---
