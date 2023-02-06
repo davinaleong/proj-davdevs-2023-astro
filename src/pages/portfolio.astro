@@ -1,5 +1,25 @@
 ---
+import functions from "./../functions"
+
 import MainAstroLayout from "./../layouts/main.layout.astro"
+
+const projectPosts = await Astro.glob('./../content/portfolio/projects/*.md')
+const projects = functions.sortArray(projectPosts.filter(post => !post.frontmatter.draft))
+projects.sort((a: any, b: any) => {
+    const A = a.frontmatter.date
+    const B = b.frontmatter.date
+
+    let comparison = 0
+    if (A > B) {
+        comparison = -1
+    } else if (A < B) {
+        comparison = 1
+    } else {
+        comparison = 0
+    }
+
+    return comparison
+})
 ---
 <MainAstroLayout>
     <section
