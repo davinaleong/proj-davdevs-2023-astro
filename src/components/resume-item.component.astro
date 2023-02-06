@@ -3,28 +3,33 @@ import dayjs from "dayjs"
 
 const { item } = Astro.props
 const { frontmatter, Content } = item
-const { title, start, end, subtitle, position } = frontmatter
+const { title, start, end, subtitle, position, prefix } = frontmatter
 
-let startStr = start
-let endStr = end
-
-if (startStr !== "Present") {
-  startStr = dayjs(startStr).format("DD MMM")
+let theTitle = title
+if (prefix) {
+  theTitle = prefix + title
 }
 
-if (endStr !== "" && endStr !== "Present") {
-  endStr = dayjs(endStr).format("DD MMM")
+let theStart = start
+let theEnd = end
+
+if (theStart !== "Present") {
+  theStart = dayjs(theStart).format("DD MMM")
 }
 
-let period = startStr
-if (endStr) {
-  period = `${startStr} - ${endStr}`
+if (theEnd && theEnd !== "Present") {
+  theEnd = dayjs(theEnd).format("DD MMM")
+}
+
+let period = theStart
+if (theEnd) {
+  period = `${theStart} - ${theEnd}`
 }
 ---
-<div class="resume-item | fsize-300 p-200">
+<li class="resume-item | fsize-300 p-200">
     <div class="resume-item__period">{period}</div>
     <div class="resume-item__heading">
-      <h2 class="ff-secondary fsize-400 fw-bold">{title}</h2>
+      <h2 class="ff-secondary fsize-400 fw-bold">{theTitle}</h2>
       <p>
         <strong><em>{subtitle}</em></strong>
       </p>
@@ -33,4 +38,4 @@ if (endStr) {
     <div class="resume-item__description">
       <Content />
     </div>
-</div>
+</li>

@@ -1,14 +1,23 @@
 ---
+import functions from "./../functions"
+
 import profilePic from "./../styles/images/profile-pic.png"
 import MainAstroLayout from "./../layouts/main.layout.astro"
 import ResumeItemAstroComponent from "./../components/resume-item.component.astro"
 
 import * as main from "./../content/resume/main.md"
-const skills = await Astro.glob('./../content/resume/skills/*.md')
-const experiences = await Astro.glob('./../content/resume/experience/*.md')
-experiences.reverse()
-const education = await Astro.glob('./../content/resume/education/*.md')
-const certificates = await Astro.glob('./../content/resume/certificates/*.md')
+
+const skillPosts = await Astro.glob('./../content/resume/skills/*.md')
+const skills = functions.sortArray(skillPosts.filter(post => !post.frontmatter.draft))
+
+const experiencePosts = await Astro.glob('./../content/resume/experience/*.md')
+const experiences = functions.sortArrayDesc(experiencePosts.filter(post => !post.frontmatter.draft))
+
+const educationPosts = await Astro.glob('./../content/resume/education/*.md')
+const education = functions.sortArrayDesc(educationPosts.filter(post => !post.frontmatter.draft))
+
+const certificatesPosts = await Astro.glob('./../content/resume/certificates/*.md')
+const certificates = functions.sortArrayDesc(certificatesPosts.filter(post => !post.frontmatter.draft))
 ---
 
 <MainAstroLayout className="resume | clr-gray-900 bg-white">
@@ -109,7 +118,9 @@ const certificates = await Astro.glob('./../content/resume/certificates/*.md')
         Experience
       </h2>
 
-      {experiences.reverse().map((item: any) => (<ResumeItemAstroComponent item={item}/>))}
+      <ul class="resume-item-list">
+        {experiences.map((item: any) => (<ResumeItemAstroComponent item={item}/>))}
+      </ul>
     </div>
   </section>
 
@@ -123,17 +134,9 @@ const certificates = await Astro.glob('./../content/resume/certificates/*.md')
         Education
       </h2>
 
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">
-            Diploma in Information Technology
-          </h2>
-          <p>
-            <strong><em>Singapore Polytechnic, Singapore</em></strong>
-          </p>
-        </div>
-      </div>
+      <ul class="resume-item-list">
+        {education.map((item: any) => (<ResumeItemAstroComponent item={item}/>))}
+      </ul>
     </div>
   </section>
 
@@ -150,25 +153,9 @@ const certificates = await Astro.glob('./../content/resume/certificates/*.md')
         Certificates
       </h2>
 
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">Certified Scrum Master</h2>
-          <p>
-            <strong><em>Scrum Alliance</em></strong>
-          </p>
-        </div>
-      </div>
-
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">Certified Scrum Master</h2>
-          <p>
-            <strong><em>Scrum Alliance</em></strong>
-          </p>
-        </div>
-      </div>
+      <ul class="resume-item-list">
+        {certificates.map((item: any) => (<ResumeItemAstroComponent item={item}/>))}
+      </ul>
     </div>
   </section>
 

@@ -63,10 +63,6 @@
   grid-template-rows: repeat(2, max-content);
   gap: var(--r-size-200);
 
-  &:nth-child(even) {
-    background-color: var(--clr-gray-100);
-  }
-
   &__description {
     grid-column: 1 / -1;
   }
@@ -76,6 +72,10 @@
   .alert {
     grid-column: 1 / -1;
     grid-row: 1;
+  }
+
+  .section .resume-item:nth-child(even) {
+    background-color: var(--clr-gray-100);
   }
 
   .main-header-content {
@@ -100,7 +100,7 @@
     gap: 0;
   }
 
-  ul {
+  ul:not(.resume-item-list) {
     padding-left: var(--r-size-400);
   }
 }
