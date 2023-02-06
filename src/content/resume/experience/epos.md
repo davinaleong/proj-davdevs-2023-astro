@@ -1,0 +1,13 @@
+---
+title: "EPOS"
+start: "2022-07-15"
+end: "Present"
+company: "EPOS POS System Singapore"
+position: "Web Developer"
+location: "Singapore, RedHill"
+sortOrder: 5
+---
+
+- Developed the **company's SOP for building websites**
+- Built **15 websites and landing pages** in **WordPress using Elementor, MetForm and Contact 7**
+- Used `CSS` and custom `JavaScript` to style website and build custom features like **tabbed content**

@@ -1,0 +1,13 @@
+---
+title: "Pixel"
+start: "2018-05-10"
+end: "2019-08-01"
+company: "The Pixel Age"
+position: "Web Developer"
+location: "Singapore, Paya Lebar"
+sortOrder: 2
+---
+
+- Developed an **API** in **NodeJS**, **JavaScript (ES6)**, **Sequelize**, **GraphQL** and **AppSync**.
+- Developed many sites in **CraftCMS**.
+- Developed a **dashboard** in **Laravel**, **Bootstrap**, **JavaScript (ES6)**, **HTML5** & **CSS3**.
