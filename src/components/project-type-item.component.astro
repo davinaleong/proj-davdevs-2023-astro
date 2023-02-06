@@ -1,0 +1,9 @@
+---
+const { item } = Astro.props
+const { title, color, icon } = item
+---
+
+<div class="ta-center">
+    <i class={`fa-brands ${icon} ${color} fsize-1000`}></i>
+    <p>{title}</p>
+</div>

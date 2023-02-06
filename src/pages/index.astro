@@ -1,7 +1,10 @@
 ---
 import MainAstroLayout from "./../layouts/main.layout.astro"
+import ProjectTypeItemAstroComponent from "./../components/project-type-item.component.astro"
 
 import logo from "./../styles/images/logo-512x512.png"
+
+import * as main from "./../content/portfolio/main.md"
 ---
 <MainAstroLayout>
 	<section
@@ -40,37 +43,7 @@ import logo from "./../styles/images/logo-512x512.png"
 			</h2>
 
 			<div class="project-types-grid m-b-400">
-				<div class="ta-center">
-					<i class="fa-brands fa-html5 clr-html-400 fsize-1000"></i>
-					<p>HTML/HTML5</p>
-				</div>
-
-				<div class="ta-center">
-					<i class="fa-brands fa-css3 clr-css-400 fsize-1000"></i>
-					<p>CSS/CSS3</p>
-				</div>
-
-				<div class="ta-center">
-					<i class="fa-brands fa-js clr-javascript-400 fsize-1000"></i>
-					<p>JavaScript</p>
-				</div>
-
-				<div class="ta-center">
-					<i
-						class="fa-brands fa-bootstrap clr-bootstrap-400 fsize-1000"
-					></i>
-					<p>Bootstrap</p>
-				</div>
-
-				<div class="ta-center">
-					<i class="fa-brands fa-react clr-react-400 fsize-1000"></i>
-					<p>React</p>
-				</div>
-
-				<div class="ta-center">
-					<i class="fa-brands fa-laravel clr-laravel-400 fsize-1000"></i>
-					<p>Laravel</p>
-				</div>
+				{main.frontmatter.categories.map((item: any) => <ProjectTypeItemAstroComponent item={item} />)}
 			</div>
 		</div>
 	</section>
