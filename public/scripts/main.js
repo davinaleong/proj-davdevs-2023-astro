@@ -77,11 +77,11 @@ const btnModalCloseEl = document.querySelector(
 
 btnHeaderJokeMobileEl.addEventListener(`click`, (e) => {
   e.preventDefault()
-  modalJokesEl.setAttribute(openAttr, true)
+  renderJoke()
 })
 btnHeaderJokeEl.addEventListener(`click`, (e) => {
   e.preventDefault()
-  modalJokesEl.setAttribute(openAttr, true)
+  renderJoke()
 })
 
 modalCloseEl.addEventListener(`click`, (e) => {
@@ -92,3 +92,14 @@ btnModalCloseEl.addEventListener(`click`, (e) => {
   e.preventDefault()
   modalJokesEl.removeAttribute(openAttr)
 })
+
+async function renderJoke() {
+  const response = await fetch(
+    `https://davinas-cms.herokuapp.com/api/davdevs/jokes/random`
+  )
+  const data = await response.json()
+  const { joke } = data
+
+  modalJokesEl.querySelector(`[data-element="modal-jokes-body"]`).innerHTML = joke.text.replace(/(?:\r\n|\r|\n)/g, '<br/>')
+  modalJokesEl.setAttribute(openAttr, true)
+}

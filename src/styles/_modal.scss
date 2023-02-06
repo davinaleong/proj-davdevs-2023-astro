@@ -24,6 +24,7 @@
   --modal-dialog-clr: var(--clr-gray-900);
   --modal-dialog-clr-bg: var(--clr-primary-200);
 
+  min-width: 50ch;
   max-width: 75ch;
   color: var(--modal-dialog-clr);
   background-color: var(--modal-dialog-clr-bg);
