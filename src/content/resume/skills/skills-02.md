@@ -1,6 +1,5 @@
 ---
 title: "Development"
-sortOrder: 2
 draft: 0
 ---
 

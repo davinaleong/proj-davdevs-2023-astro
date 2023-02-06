@@ -1,0 +1,36 @@
+---
+import dayjs from "dayjs"
+
+const { item } = Astro.props
+const { frontmatter, Content } = item
+const { title, start, end, subtitle, position } = frontmatter
+
+let startStr = start
+let endStr = end
+
+if (startStr !== "Present") {
+  startStr = dayjs(startStr).format("DD MMM")
+}
+
+if (endStr !== "" && endStr !== "Present") {
+  endStr = dayjs(endStr).format("DD MMM")
+}
+
+let period = startStr
+if (endStr) {
+  period = `${startStr} - ${endStr}`
+}
+---
+<div class="resume-item | fsize-300 p-200">
+    <div class="resume-item__period">{period}</div>
+    <div class="resume-item__heading">
+      <h2 class="ff-secondary fsize-400 fw-bold">{title}</h2>
+      <p>
+        <strong><em>{subtitle}</em></strong>
+      </p>
+      {position && <p><em>{position}</em></p>}
+    </div>
+    <div class="resume-item__description">
+      <Content />
+    </div>
+</div>

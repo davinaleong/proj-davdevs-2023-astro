@@ -1,8 +1,14 @@
 ---
 import profilePic from "./../styles/images/profile-pic.png"
 import MainAstroLayout from "./../layouts/main.layout.astro"
+import ResumeItemAstroComponent from "./../components/resume-item.component.astro"
 
 import * as main from "./../content/resume/main.md"
+const skills = await Astro.glob('./../content/resume/skills/*.md')
+const experiences = await Astro.glob('./../content/resume/experience/*.md')
+experiences.reverse()
+const education = await Astro.glob('./../content/resume/education/*.md')
+const certificates = await Astro.glob('./../content/resume/certificates/*.md')
 ---
 
 <MainAstroLayout className="resume | clr-gray-900 bg-white">
@@ -81,29 +87,15 @@ import * as main from "./../content/resume/main.md"
       <h2 class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200">
         Skills
       </h2>
-
-      <p class="m-b-50"><strong>Programming</strong></p>
-      <p class="fsize-300 m-b-400 restrict-width">
-        JavaScript (ES6), Astro SSG, ReactJS, JSX, GatsbyJS, Angular 2, jQuery,
-        PHP, Laravel, OpenCart, WordPress/WooCommerce, CodeIgniter, CraftCMS,
-        PHPUnit, NodeJS, Jest, Express, HTML5, CSS3, SASS, LESS, Flexbox, CSS
-        Grid, Bootstrap, Tailwind, Material UI, GraphQL, MySQL, GraphDB,
-        Elasticsearch, XML, JSON
-      </p>
-
-      <p class="m-b-50"><strong>Development</strong></p>
-      <p class="fsize-300 m-b-400 restrict-width">
-        GIT, AWS, Docker, Web Development, Unit Testing, Ionic Framework,
-        Responsive Web Design, REST API
-      </p>
-
-      <p class="m-b-50"><strong>Design</strong></p>
-      <p class="fsize-300 m-b-400 restrict-width">
-        Adobe XD, Figma, PhotoShop, Illustrator
-      </p>
-
-      <p class="m-b-50"><strong>Languages</strong></p>
-      <p class="fsize-300 restrict-width">English, Chinese (Mandrian)</p>
+      
+      {skills.map(({frontmatter, Content}: any) => (
+        <>
+          <p class="m-b-50"><strong>{frontmatter.title}</strong></p>
+          <div class="fsize-300 m-b-400 restrict-width">
+            <Content />
+          </div>
+        </>
+      ))}
     </div>
   </section>
 
@@ -117,202 +109,7 @@ import * as main from "./../content/resume/main.md"
         Experience
       </h2>
 
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jul 2022 - Present</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">
-            EPOS POS System Singapore
-          </h2>
-          <p>
-            <strong><em>RedHill, Singapore</em></strong>
-          </p>
-          <p><em>Web Developer</em></p>
-        </div>
-        <div class="resume-item__description">
-          <ul class="p-l-400">
-            <li>
-              Developed the <strong>company's SOP for building websites</strong>
-            </li>
-            <li>
-              Built <strong>15 websites and landing pages</strong> in <strong
-                >WordPress using Elementor, MetForm and Contact 7</strong
-              >
-            </li>
-            <li>
-              Used <code>CSS</code> and custom <code>JavaScript</code> to style website
-              and build custom features like <strong>tabbed content</strong>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
-          <p>
-            <strong><em>Kallang, Singapore</em></strong>
-          </p>
-          <p><em>Web Developer</em></p>
-        </div>
-        <div class="resume-item__description">
-          <ul class="p-l-400">
-            <li>
-              Developed at least <strong>22 ecommerce websites</strong> in <strong
-                >OpenCart</strong
-              > and <strong>WordPress/WooCommerce</strong> using <strong
-                >responsive web design</strong
-              >, <strong>Bootstrap</strong>, <strong>HTML5</strong>, <strong
-                >SASS</strong
-              >, <strong>CSS</strong>, <strong>Flexbox</strong>, <strong
-                >CSS Grid</strong
-              > & <strong>JavaScript (ES6)</strong>
-            </li>
-            <li>
-              Put to production at least <strong>30 over websites</strong> which
-              includes setting up of <strong>cron jobs</strong> and <strong
-                >database management</strong>
-            </li>
-            <li>
-              Integrated <strong>manual</strong> & <strong
-                >PayPal payments</strong
-              > with custom <strong>Wix</strong> checkout page.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
-          <p>
-            <strong><em>Kallang, Singapore</em></strong>
-          </p>
-          <p><em>Web Developer</em></p>
-        </div>
-        <div class="resume-item__description">
-          <ul class="p-l-400">
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
-              harum!
-            </li>
-            <li>
-              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
-            </li>
-            <li>
-              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
-              enim.
-            </li>
-            <li>
-              Quam perferendis suscipit a animi id soluta expedita minus harum.
-            </li>
-            <li>
-              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
-              ratione libero veritatis!
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
-          <p>
-            <strong><em>Kallang, Singapore</em></strong>
-          </p>
-          <p><em>Web Developer</em></p>
-        </div>
-        <div class="resume-item__description">
-          <ul class="p-l-400">
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
-              harum!
-            </li>
-            <li>
-              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
-            </li>
-            <li>
-              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
-              enim.
-            </li>
-            <li>
-              Quam perferendis suscipit a animi id soluta expedita minus harum.
-            </li>
-            <li>
-              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
-              ratione libero veritatis!
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
-          <p>
-            <strong><em>Kallang, Singapore</em></strong>
-          </p>
-          <p><em>Web Developer</em></p>
-        </div>
-        <div class="resume-item__description">
-          <ul class="p-l-400">
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
-              harum!
-            </li>
-            <li>
-              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
-            </li>
-            <li>
-              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
-              enim.
-            </li>
-            <li>
-              Quam perferendis suscipit a animi id soluta expedita minus harum.
-            </li>
-            <li>
-              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
-              ratione libero veritatis!
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="resume-item | fsize-300 p-200">
-        <div class="resume-item__period">Jun 2022 - Jul 2022</div>
-        <div class="resume-item__heading">
-          <h2 class="ff-secondary fsize-400 fw-bold">Firstcome Solutions</h2>
-          <p>
-            <strong><em>Kallang, Singapore</em></strong>
-          </p>
-          <p><em>Web Developer</em></p>
-        </div>
-        <div class="resume-item__description">
-          <ul class="p-l-400">
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore,
-              harum!
-            </li>
-            <li>
-              Natus libero odio perferendis quis, omnis ipsam sequi eos officia?
-            </li>
-            <li>
-              Atque corrupti magnam natus nam dolorum ullam, dolorem itaque
-              enim.
-            </li>
-            <li>
-              Quam perferendis suscipit a animi id soluta expedita minus harum.
-            </li>
-            <li>
-              Reprehenderit nemo obcaecati, expedita blanditiis illo laudantium
-              ratione libero veritatis!
-            </li>
-          </ul>
-        </div>
-      </div>
+      {experiences.reverse().map((item: any) => (<ResumeItemAstroComponent item={item}/>))}
     </div>
   </section>
 

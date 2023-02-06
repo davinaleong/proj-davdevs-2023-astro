@@ -99,6 +99,10 @@
   .section-inner {
     gap: 0;
   }
+
+  ul {
+    padding-left: var(--r-size-400);
+  }
 }
 
 @media (max-width: breakpoint("md") - 0.01em) {
