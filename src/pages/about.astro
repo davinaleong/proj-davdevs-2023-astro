@@ -1,8 +1,8 @@
 ---
 import MainAstroLayout from "./../layouts/main.layout.astro"
+import ContentAstroComponent from "./../components/content.component.astro"
 
 const timelineItems = await Astro.glob("../content/timeline/*.md")
-console.log(timelineItems[0])
 ---
 
 <MainAstroLayout>
@@ -117,17 +117,15 @@ console.log(timelineItems[0])
         >
           Timeline
         </h2>
-      </div>
 
-      <div class="bg-gray-800 p-y-400">
         <div class="timeline-carousel p-b-200">
           {
-            timelineItems.map((timelineItem) => (
+            timelineItems.map(({ frontmatter, Content }) => (
               <div class="timeline-card">
                 <p class="fsize-500 m-b-200">
-                  {timelineItem.frontmatter.period}
+                  {frontmatter.period}
                 </p>
-                <p>{timelineItem.frontmatter.content}</p>
+                <Content />
               </div>
             ))
           }
