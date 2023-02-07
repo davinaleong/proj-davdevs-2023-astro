@@ -1,13 +1,14 @@
 ---
 import * as main from "./../content/portfolio/main.md"
 
-const { item } = Astro.props
+const { featured, item } = Astro.props
 const { title, subtitle, category, image } = item.frontmatter
 
+const featuredClass = featured ? `card-featured` : ``
 const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.name.toLowerCase() === category.toLowerCase())[0]
 ---
 
-<a class="card" href={item.url}>
+<a class={`card ${featuredClass}`} href={item.url}>
     <img
         src={`/screenshots/${image}`}
         alt="Project Screenshot"

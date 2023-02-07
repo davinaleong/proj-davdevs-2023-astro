@@ -1,0 +1,13 @@
+---
+const { item } = Astro.props
+const { label, image, link } = item
+---
+
+<a href={link} target="_blank" class="link-accent additional-content-cell">
+  <img
+    src={`/screenshots/${image}`}
+    alt=""
+    class="additional-content-cell__image"
+  />
+  <p class="additional-content-cell__content">{label}</p>
+</a>

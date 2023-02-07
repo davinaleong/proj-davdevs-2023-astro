@@ -248,6 +248,9 @@ $colors: (
   "laravel": (
     400: hsl(3, 100%, 56%),
   ),
+  "astro": (
+    400: hsl(22, 100%, 50%),
+  ),
 );
 
 @function color($color, $tint) {

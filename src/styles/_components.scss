@@ -52,6 +52,10 @@
   background-color: var(--clr-lime-800);
 }
 
+a.card-featured {
+  color: var(--clr-gray-50);
+}
+
 .card:where(:hover) {
   background-color: var(--clr-accent-2-500);
 }

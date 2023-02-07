@@ -1,0 +1,12 @@
+---
+const { item } = Astro.props
+const { label, list } = item
+---
+
+<div class="skills-cell">
+    <h3 class="fsize-600 fw-medium clr-yellow-300">{label}</h3>
+
+    <ul class="list-style-none">
+        {list.map((item: any) => <li>{item}</li>)}
+    </ul>
+</div>
