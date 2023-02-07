@@ -1,6 +1,7 @@
 ---
 import MainAstroLayout from "./../../layouts/main.layout.astro"
 import CardAstroComponent from "./../../components/card.component.astro"
+import PaginationAstroComponent from "./../../components/pagination.component.astro"
 
 export async function getStaticPaths({ paginate }: any) {
   const projectPages = await Astro.glob('./../projects/*.md')
@@ -19,7 +20,8 @@ export async function getStaticPaths({ paginate }: any) {
 
     return comparison
 })
-  return paginate(projectPages, { pageSize: import.meta.env.PER_PAGE });
+//   return paginate(projectPages, { pageSize: import.meta.env.PER_PAGE })
+  return paginate(projectPages, { pageSize: import.meta.env.PER_PAGE })
 }
 
 const { page } = Astro.props;
@@ -53,39 +55,7 @@ const { page } = Astro.props;
             </div>
             <!-- ./card-grid -->
 
-            <ul class="pagination" role="list">
-                <li class="pagination-item">
-                    <a href="./project-item.html" class="pagination-link">
-                        <i class="fa-solid fa-chevrons-left"></i>
-                    </a>
-                </li>
-                <li class="pagination-item">
-                    <a href="./project-item.html" class="pagination-link">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </a>
-                </li>
-                <li class="pagination-item">
-                    <a href="./project-item.html" class="pagination-link">3</a>
-                </li>
-                <li class="pagination-item">
-                    <a href="./project-item.html" class="pagination-link active"
-                        >4</a
-                    >
-                </li>
-                <li class="pagination-item">
-                    <a href="./project-item.html" class="pagination-link">5</a>
-                </li>
-                <li class="pagination-item">
-                    <a href="./project-item.html" class="pagination-link">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-                </li>
-                <li class="pagination-item">
-                    <a href="./project-item.html" class="pagination-link">
-                        <i class="fa-solid fa-chevrons-right"></i>
-                    </a>
-                </li>
-            </ul>
+            <PaginationAstroComponent page={page}/>
         </div>
     </section>
 </MainAstroLayout>
