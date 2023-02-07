@@ -19,7 +19,7 @@ export async function getStaticPaths({ paginate }: any) {
 
     return comparison
 })
-  return paginate(projectPages, { pageSize: 24 });
+  return paginate(projectPages, { pageSize: 1 });
 }
 
 const { page } = Astro.props;
@@ -31,7 +31,7 @@ const { page } = Astro.props;
     >
         <div class="section-inner container section-inner-hero">
             <div class="section-inner-hero__content-cell">
-                <h1 class="ff-secondary fsize-700 fw-medium">Portfolio (page: {page.currentPage})</h1>
+                <h1 class="ff-secondary fsize-700 fw-medium">Portfolio ({page.currentPage}/{page.lastPage})</h1>
             </div>
             <div class="section-inner-hero__icon-cell">
                 <div class="section-inner-hero__icon-cell__icon-container">
