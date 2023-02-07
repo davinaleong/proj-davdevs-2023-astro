@@ -1,0 +1,30 @@
+---
+title: "Glass Website"
+subtitle: "Static Website"
+date: "2022-07-27"
+description: "A static glass interface following a video tutorial."
+keywords: "davina, davina leong, leong, glass, website, html, css, css3, html5"
+category: "CSS"
+image: "glass-website.png"
+link: "https://davinaleong.github.io/proj-glass-website/"
+featured: false
+technologies: [
+    {
+        "name": "Frontend",
+        "items": ["HTML", "CSS", "Backdrop Filter"]
+    },
+    {
+        "name": "Deployment",
+        "items": ["GitHub Pages"]
+    },
+    {
+        "name": "Highlights",
+        "items": ["Backdrop Filter"]
+    }
+]
+draft: 0
+---
+
+This demo was me following [this tutorial](https://www.youtube.com/watch?v=O7WbVj5apxU) by [developedbyed](https://www.youtube.com/@developedbyed).
+
+I wanted to improve my web design skills when I chanced upon this video.
