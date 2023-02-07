@@ -1,5 +1,5 @@
 ---
-title: "Header"
+title: "About"
 name: "Davina Leong"
 profilePic: "./../styles/images/profile-pic.png"
 subtitle: "Web Developer, 7 years"
@@ -19,13 +19,14 @@ devLink: "https://dev.to/davinaleong"
 
 introduction: "Seeking a web developer position where I can utilize my skills in HTML, CSS, JS, and PHP to contribute to the design and development of innovative and user-friendly websites. With 7 years of experience and a track record of delivering projects on time and with high quality, I am a diligent, independent, and reliable team player who is committed to continuous learning and growth."
 
-hobbies: [
+hobbies:
+  [
     "Spending time with Jesus",
     "Programming",
     "Video & board games",
     "Food",
     "Gym",
     "Host church care group",
-    "Joined tech meet ups"
-]
+    "Joined tech meet ups",
+  ]
 ---

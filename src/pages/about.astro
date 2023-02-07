@@ -1,7 +1,11 @@
 ---
 import MainAstroLayout from "./../layouts/main.layout.astro"
+import SkillsCellAstroComponent from "./../components/skills-cell.component.astro"
 
-const timelineItems = await Astro.glob("../content/timeline/*.md")
+import * as main from "./../content/about/main.md"
+
+const { skills } = main.frontmatter
+const timeline = await Astro.glob("../content/timeline/*.md")
 ---
 
 <MainAstroLayout>
@@ -35,72 +39,7 @@ const timelineItems = await Astro.glob("../content/timeline/*.md")
       </h2>
 
       <div class="skills-grid m-b-600" style="--skills-cell-count: 4">
-        <div class="skills-cell">
-          <h3 class="fsize-600 fw-medium clr-yellow-300">Frontend</h3>
-
-          <ul class="list-style-none">
-            <li>HTML/HTML5</li>
-            <li>CSS/CSS3</li>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>SASS</li>
-            <li>Bootstrap</li>
-            <li>Tailwind</li>
-            <li>Material UI</li>
-            <li>React</li>
-            <li>JSX</li>
-            <li>GatsbyJS</li>
-            <li>Astro SSG</li>
-            <li>Responsive Web Design</li>
-          </ul>
-        </div>
-
-        <div class="skills-cell">
-          <h3 class="fsize-600 fw-medium clr-yellow-300">Backend</h3>
-
-          <ul class="list-style-none">
-            <li>PHP</li>
-            <li>Laravel</li>
-            <li>WordPress/WooCommerce</li>
-            <li>NodeJS</li>
-            <li>PHPUnit</li>
-            <li>Jest</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-            <li>REST API</li>
-            <li>Sequelize</li>
-            <li>Express</li>
-            <li>GrapQL</li>
-            <li>Vite</li>
-          </ul>
-        </div>
-
-        <div class="skills-cell">
-          <h3 class="fsize-600 fw-medium clr-yellow-300">DevOps</h3>
-
-          <ul class="list-style-none">
-            <li>Netlify</li>
-            <li>Heroku</li>
-            <li>Amazon AWS</li>
-            <li>CPanel</li>
-            <li>Docker</li>
-            <li>CI/CD</li>
-          </ul>
-        </div>
-
-        <div class="skills-cell">
-          <h3 class="fsize-600 fw-medium clr-yellow-300">Tools</h3>
-
-          <ul class="list-style-none">
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>BitBucket</li>
-            <li>Figma</li>
-            <li>Adobe XD</li>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
-          </ul>
-        </div>
+        {skills.map((item: any) => <SkillsCellAstroComponent item={item}/>)}
       </div>
     </div>
   </section>
@@ -119,7 +58,7 @@ const timelineItems = await Astro.glob("../content/timeline/*.md")
 
         <div class="timeline-carousel p-b-200">
           {
-            timelineItems.map(({ frontmatter, Content }) => (
+            timeline.map(({ frontmatter, Content }) => (
               <div class="timeline-card">
                 <p class="fsize-500 m-b-200">
                   {frontmatter.period}
