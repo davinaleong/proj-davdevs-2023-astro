@@ -14,18 +14,64 @@ if (nextPage >= lastPage) {
     nextPage = lastPage
 }
 
-// const pages = [
-//     {
-//         label: firstPage,
-//         page: firstPage
-//     }
-// ]
-
-const pages = []
+let pages = []
 for (let i = firstPage; i <= lastPage; ++i) {
     pages.push({
-        page: i,
+        page: String(i),
         active: i == currentPage ? `active` : ``
+    })
+}
+
+if (lastPage >= 9) {
+    pages = [
+        {
+            page: `${firstPage}`,
+            active: firstPage == currentPage ? `active` : ``
+        }
+    ]
+
+    if (prevPage !== firstPage && prevPage !== lastPage && prevPage !== currentPage) {
+        if (prevPage > firstPage + 1) {
+            pages.push({
+                page: `...`,
+                active: ``
+            })
+        }
+
+        if (prevPage < currentPage) {
+            pages.push({
+                page: `${prevPage}`,
+                active: prevPage == currentPage ? `active` : ``
+            })
+        }
+    }
+
+    if (currentPage !== firstPage && currentPage !== lastPage) {
+        pages.push({
+            page: String(currentPage),
+            active: `active`
+        })
+    }
+
+    if (nextPage !== firstPage && nextPage !== lastPage && nextPage !== currentPage) {
+        if (nextPage > currentPage) {
+            pages.push({
+                page: `${nextPage}`,
+                active: nextPage == currentPage ? `active` : ``
+            })
+        }
+
+        if (nextPage < lastPage - 1) {
+            pages.push({
+                page: `...`,
+                active: ``
+            })
+        }
+    }
+
+    pages.push({
+        page: `${lastPage}`,
+        active: lastPage == currentPage ? `active` : ``
     })
 }
 ---
@@ -42,7 +88,8 @@ for (let i = firstPage; i <= lastPage; ++i) {
     </li>
     {pages.map(({page, active}: any) => (
         <li class="pagination-item">
-            <a href={`portfolio/${page}`} class={`pagination-link ${active}`}>{page}</a>
+            {page === "..." && <span class={`pagination-link`}>{page}</span>}
+            {page !== "..." && <a href={`portfolio/${page}`} class={`pagination-link ${active}`}>{page}</a>}
         </li>
     ))}
     <li class="pagination-item">
