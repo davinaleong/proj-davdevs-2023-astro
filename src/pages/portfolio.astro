@@ -2,8 +2,9 @@
 import functions from "./../functions"
 
 import MainAstroLayout from "./../layouts/main.layout.astro"
+import CardAstroComponent from "./../components/card.component.astro"
 
-const projectPosts = await Astro.glob('./../content/portfolio/projects/*.md')
+const projectPosts = await Astro.glob('./portfolio/*.md')
 const projects = functions.sortArray(projectPosts.filter(post => !post.frontmatter.draft))
 projects.sort((a: any, b: any) => {
     const A = a.frontmatter.date
@@ -46,110 +47,7 @@ projects.sort((a: any, b: any) => {
     >
         <div class="section-inner container">
             <div class="card-grid">
-                <a class="card" href="./project-item.html">
-                <img
-                    src="./images/fem-projects.jpg"
-                    alt="Project Screenshot"
-                    class="card-image"
-                />
-                <div class="card-corner card-corner-top-right">
-                    <i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
-                </div>
-                <div class="card-body">
-                    <p class="ff-secondary fsize-600 fw-medium">Project Title</p>
-                    <p>HTML Mircrosite</p>
-                </div>
-                </a>
-
-                <a class="card" href="./project-item.html">
-                <img
-                    src="./images/fem-projects.jpg"
-                    alt="Project Screenshot"
-                    class="card-image"
-                />
-                <div class="card-corner card-corner-top-right">
-                    <i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
-                </div>
-                <div class="card-body">
-                    <p class="ff-secondary fsize-600 fw-medium">Project Title</p>
-                    <p>HTML Mircrosite</p>
-                </div>
-                </a>
-
-                <a class="card" href="./project-item.html">
-                <img
-                    src="./images/fem-projects.jpg"
-                    alt="Project Screenshot"
-                    class="card-image"
-                />
-                <div class="card-corner card-corner-top-right">
-                    <i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
-                </div>
-                <div class="card-body">
-                    <p class="ff-secondary fsize-600 fw-medium">Project Title</p>
-                    <p>HTML Mircrosite</p>
-                </div>
-                </a>
-
-                <a class="card" href="./project-item.html">
-                <img
-                    src="./images/fem-projects.jpg"
-                    alt="Project Screenshot"
-                    class="card-image"
-                />
-                <div class="card-corner card-corner-top-right">
-                    <i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
-                </div>
-                <div class="card-body">
-                    <p class="ff-secondary fsize-600 fw-medium">Project Title</p>
-                    <p>HTML Mircrosite</p>
-                </div>
-                </a>
-
-                <a class="card" href="./project-item.html">
-                <img
-                    src="./images/fem-projects.jpg"
-                    alt="Project Screenshot"
-                    class="card-image"
-                />
-                <div class="card-corner card-corner-top-right">
-                    <i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
-                </div>
-                <div class="card-body">
-                    <p class="ff-secondary fsize-600 fw-medium">Project Title</p>
-                    <p>HTML Mircrosite</p>
-                </div>
-                </a>
-
-                <a class="card" href="./project-item.html">
-                <img
-                    src="./images/fem-projects.jpg"
-                    alt="Project Screenshot"
-                    class="card-image"
-                />
-                <div class="card-corner card-corner-top-right">
-                    <i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
-                </div>
-                <div class="card-body">
-                    <p class="ff-secondary fsize-600 fw-medium">Project Title</p>
-                    <p>HTML Mircrosite</p>
-                </div>
-                </a>
-
-                <a class="card" href="./project-item.html">
-                <img
-                    src="./images/fem-projects.jpg"
-                    alt="Project Screenshot"
-                    class="card-image"
-                />
-                <div class="card-corner card-corner-top-right">
-                    <i class="fa-brands fa-js fa-lg clr-yellow-500"></i>
-                </div>
-                <div class="card-body">
-                    <p class="ff-secondary fsize-600 fw-medium">Project Title</p>
-                    <p>HTML Mircrosite</p>
-                </div>
-                </a>
+                {projects.map((item: any) => <CardAstroComponent item={item}/>)}
             </div>
             <!-- ./card-grid -->
 

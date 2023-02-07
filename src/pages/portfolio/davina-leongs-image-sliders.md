@@ -1,5 +1,5 @@
 ---
-title: "Davina Leong's Image Slider"
+title: "Image Sliders"
 subtitle: "JavaScript Demo"
 date: "2022-12-08"
 description: "My own solution to a simple image slider without any plugins."

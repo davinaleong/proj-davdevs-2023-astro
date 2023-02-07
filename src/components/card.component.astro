@@ -3,4 +3,21 @@ import * as main from "./../content/portfolio/main.md"
 
 const { item } = Astro.props
 const { title, subtitle, category, image } = item.frontmatter
+
+const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.name === category)[0]
 ---
+
+<a class="card" href={item.url}>
+    <img
+        src={`images/${image}`}
+        alt="Project Screenshot"
+        class="card-image"
+    />
+    <div class="card-corner card-corner-top-right">
+        <i class={`fa-brands ${selectedCategory.icon} fa-lg ${selectedCategory.color}`}></i>
+    </div>
+    <div class="card-body">
+        <p class="ff-secondary fsize-600 fw-medium">{title}</p>
+        <p>{subtitle}</p>
+    </div>
+</a>
