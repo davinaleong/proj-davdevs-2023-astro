@@ -8,20 +8,12 @@ category: "JS"
 image: "password-visibility.png"
 link: "https://davinaleong.github.io/password-visibility/"
 featured: true
-technologies: [
-    {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["CSS Adjacent Sibling Selector"]
-    }
-]
+technologies:
+  [
+    { "name": "Frontend", "items": ["HTML", "CSS", "JavaScript"] },
+    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { "name": "Highlights", "items": ["CSS Adjacent Sibling Selector"] },
+  ]
 draft: 0
 ---
 

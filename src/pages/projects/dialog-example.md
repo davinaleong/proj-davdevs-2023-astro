@@ -8,20 +8,15 @@ category: "JS"
 image: "dialog-example.png"
 link: "https://davinaleong.github.io/proj-dialog-example/"
 featured: false
-technologies: [
+technologies:
+  [
     {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "JavaScript", "Dialog Element"]
+      "name": "Frontend",
+      "items": ["HTML", "CSS", "JavaScript", "Dialog Element"],
     },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["Dialog Element"]
-    }
-]
+    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { "name": "Highlights", "items": ["Dialog Element"] },
+  ]
 draft: 0
 ---
 

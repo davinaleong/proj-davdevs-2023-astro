@@ -4,7 +4,7 @@ import * as main from "./../content/portfolio/main.md"
 const { item } = Astro.props
 const { title, subtitle, category, image } = item.frontmatter
 
-const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.name === category)[0]
+const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.name.toLowerCase() === category.toLowerCase())[0]
 ---
 
 <a class="card" href={item.url}>

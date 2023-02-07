@@ -8,20 +8,12 @@ category: "JS"
 image: "joke-generator.png"
 link: "https://davinas-cms.herokuapp.com/frontend/joke-generator"
 featured: true
-technologies: [
-    {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-        "name": "Deployment",
-        "items": ["Heroku"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["No jQuery"]
-    }
-]
+technologies:
+  [
+    { "name": "Frontend", "items": ["HTML", "CSS", "JavaScript"] },
+    { "name": "Deployment", "items": ["Heroku"] },
+    { "name": "Highlights", "items": ["No jQuery"] },
+  ]
 draft: 0
 ---
 

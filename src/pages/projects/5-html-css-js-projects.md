@@ -8,16 +8,11 @@ category: "JS"
 image: "5-html-css-js-projects.png"
 link: "https://davinaleong.github.io/proj-five-projects/"
 featured: false
-technologies: [
-    {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "JS"]
-    },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    }
-]
+technologies:
+  [
+    { "name": "Frontend", "items": ["HTML", "CSS", "JS"] },
+    { "name": "Deployment", "items": ["GitHub Pages"] },
+  ]
 draft: 0
 ---
 

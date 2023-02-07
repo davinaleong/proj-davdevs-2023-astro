@@ -8,20 +8,12 @@ category: "CSS"
 image: "glass-website.png"
 link: "https://davinaleong.github.io/proj-glass-website/"
 featured: false
-technologies: [
-    {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "Backdrop Filter"]
-    },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["Backdrop Filter"]
-    }
-]
+technologies:
+  [
+    { "name": "Frontend", "items": ["HTML", "CSS", "Backdrop Filter"] },
+    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { "name": "Highlights", "items": ["Backdrop Filter"] },
+  ]
 draft: 0
 ---
 

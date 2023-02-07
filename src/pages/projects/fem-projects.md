@@ -8,20 +8,15 @@ category: "HTML"
 image: "fem-projects.jpg"
 link: "https://davinaleong.github.io/proj-dav-fem/"
 featured: true
-technologies: [
+technologies:
+  [
     {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "CSS Grid", "Flexbox", "JSON"]
+      "name": "Frontend",
+      "items": ["HTML", "CSS", "CSS Grid", "Flexbox", "JSON"],
     },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["CSS Grid"]
-    }
-]
+    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { "name": "Highlights", "items": ["CSS Grid"] },
+  ]
 draft: 0
 ---
 

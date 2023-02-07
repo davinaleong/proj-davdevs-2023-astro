@@ -8,20 +8,15 @@ category: "CSS"
 image: "exploring-new-pseudo-classes.png"
 link: "https://davinaleong.github.io/proj-exploring-new-pseudo-classes/"
 featured: false
-technologies: [
+technologies:
+  [
     {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "JavaScript", "Dialog Element"]
+      "name": "Frontend",
+      "items": ["HTML", "CSS", "JavaScript", "Dialog Element"],
     },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["Dialog Element"]
-    }
-]
+    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { "name": "Highlights", "items": ["Dialog Element"] },
+  ]
 draft: 0
 ---
 

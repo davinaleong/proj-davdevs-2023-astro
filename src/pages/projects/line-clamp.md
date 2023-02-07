@@ -8,20 +8,12 @@ category: "CSS"
 image: "line-clamp.png"
 link: "https://davinaleong.github.io/proj-line-clamp/"
 featured: false
-technologies: [
-    {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "Webkit"]
-    },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["Webkit"]
-    }
-]
+technologies:
+  [
+    { "name": "Frontend", "items": ["HTML", "CSS", "Webkit"] },
+    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { "name": "Highlights", "items": ["Webkit"] },
+  ]
 draft: 0
 ---
 
