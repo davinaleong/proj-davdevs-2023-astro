@@ -21,7 +21,7 @@ export async function getStaticPaths({ paginate }: any) {
     return comparison
 })
 //   return paginate(projectPages, { pageSize: import.meta.env.PER_PAGE })
-  return paginate(projectPages, { pageSize: import.meta.env.PER_PAGE })
+  return paginate(projectPages, { pageSize: 1 })
 }
 
 const { page } = Astro.props;

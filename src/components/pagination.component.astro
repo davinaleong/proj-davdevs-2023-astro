@@ -1,35 +1,57 @@
 ---
 const { page } = Astro.props
+const { currentPage, lastPage } = page
+
+const firstPage = 1
+
+let prevPage = currentPage - 1
+if (prevPage <= firstPage) {
+    prevPage = firstPage
+}
+
+let nextPage = currentPage + 1
+if (nextPage >= lastPage) {
+    nextPage = lastPage
+}
+
+// const pages = [
+//     {
+//         label: firstPage,
+//         page: firstPage
+//     }
+// ]
+
+const pages = []
+for (let i = firstPage; i <= lastPage; ++i) {
+    pages.push({
+        page: i,
+        active: i == currentPage ? `active` : ``
+    })
+}
 ---
 <ul class="pagination" role="list">
     <li class="pagination-item">
-        <a href="./project-item.html" class="pagination-link">
+        <a href={`/portfolio/${firstPage}`} class="pagination-link">
             <i class="fa-solid fa-chevrons-left"></i>
         </a>
     </li>
     <li class="pagination-item">
-        <a href="./project-item.html" class="pagination-link">
+        <a href={`/portfolio/${prevPage}`} class="pagination-link">
             <i class="fa-solid fa-chevron-left"></i>
         </a>
     </li>
+    {pages.map(({page, active}: any) => (
+        <li class="pagination-item">
+            <a href={`portfolio/${page}`} class={`pagination-link ${active}`}>{page}</a>
+        </li>
+    ))}
     <li class="pagination-item">
-        <a href="./project-item.html" class="pagination-link">3</a>
-    </li>
-    <li class="pagination-item">
-        <a href="./project-item.html" class="pagination-link active"
-            >4</a
-        >
-    </li>
-    <li class="pagination-item">
-        <a href="./project-item.html" class="pagination-link">5</a>
-    </li>
-    <li class="pagination-item">
-        <a href="./project-item.html" class="pagination-link">
+        <a href={`/portfolio/${nextPage}`} class="pagination-link">
             <i class="fa-solid fa-chevron-right"></i>
         </a>
     </li>
     <li class="pagination-item">
-        <a href="./project-item.html" class="pagination-link">
+        <a href={`/portfolio/${lastPage}`} class="pagination-link">
             <i class="fa-solid fa-chevrons-right"></i>
         </a>
     </li>
