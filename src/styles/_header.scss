@@ -1,10 +1,11 @@
 .main-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   color: var(--clr-gray-900);
   background-color: var(--clr-primary-500);
+  z-index: 9;
 }
 
 .main-header-content {
