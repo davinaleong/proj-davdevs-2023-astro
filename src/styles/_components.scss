@@ -294,12 +294,9 @@ a.card-featured {
   object-fit: cover;
 }
 
-[data-element="project-item-image"] {
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
-
-  &:hover {
-    opacity: 0.7;
+.project-item-cell-content {
+  strong, .strong, em, .em, code, .code {
+    color: var(--clr-primary-500);
   }
 }
 

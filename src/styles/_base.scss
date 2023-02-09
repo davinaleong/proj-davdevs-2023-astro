@@ -148,27 +148,29 @@ body {
 }
 
 :focus {
-  outline: 2px dashed color("deep-orange", 500);
+  outline: 2px dashed var(--clr-accent-2-500);
 }
 
 // Type
+small,
+.small {
+  font-size: var(--fsize-300);
+}
+
 code,
 .code {
   font-family: var(--ff-monospace);
   font-weight: var(--fw-regular);
-  color: var(--clr-primary-500);
 }
 
 strong,
 .strong {
   font-weight: var(--fw-bold);
-  color: var(--clr-primary-500);
 }
 
 em,
 .em {
   font-style: var(--fs-italic);
-  color: var(--clr-primary-500);
 }
 
 sub,
@@ -253,6 +255,18 @@ a.link-accent {
   color: var(--btn-clr-hover);
   background-color: var(--btn-clr-hover-bg);
   border-color: var(--btn-clr-hover-border);
+}
+
+.btn-skip-navigation {
+  position: absolute;
+  top: -105%;
+  left: 0.5em;
+  z-index: 11;
+  transition: left 0.3s ease-in-out;
+
+  &:focus {
+    top: 0.5em;
+  }
 }
 
 .btn-header {

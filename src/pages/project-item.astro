@@ -11,6 +11,24 @@ const { categories } = main.frontmatter
 const { frontmatter } = Astro.props
 const { title, subtitle, date, description, keywords, category, image, link, repo, technologies } = frontmatter
 
+const projectPosts = await Astro.glob("./projects/*.md")
+const projects = projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured)
+
+projects.sort((a: any, b: any) => {
+	const A = a.frontmatter.date
+	const B = b.frontmatter.date
+
+	let comparison = 0
+	if (A > B) {
+	comparison = -1
+	} else if (A < B) {
+	comparison = 1
+	} else {
+	comparison = 0
+	}
+
+	return comparison
+})
 const formattedDate = dayjs(date).format(import.meta.env.DATE_FORMAT)
 const selectedCategory = categories.filter((cat: any) => cat.name.toLowerCase() === category.toLowerCase())[0]
 ---
@@ -53,7 +71,7 @@ const selectedCategory = categories.filter((cat: any) => cat.name.toLowerCase() 
 
                     <p class="m-b-400">{description}</p>
 
-                    <div>
+                    <div class="m-b-400">
                         <div class="btn-group">
                             { link && <a href={link} class="btn btn-accent" target="_blank">
                                 View Demo <i class="fa-solid fa-chevron-right"></i>
@@ -63,6 +81,8 @@ const selectedCategory = categories.filter((cat: any) => cat.name.toLowerCase() 
                             </a>}
                         </div>
                     </div>
+
+                    <p><small class="em">Posted on {formattedDate}</small></p>
                 </div>
                 <!-- ./project-item-cell -->
 
