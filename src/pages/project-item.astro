@@ -4,6 +4,8 @@ import dayjs from "dayjs"
 import MainAstroLayout from "./../layouts/main.layout.astro"
 import TechnologyStackItemComponent from "./../components/technology-stack-item.component.astro"
 import CardAstroComponent from "./../components/card.component.astro"
+import LinkAstroComponent from "./../components/link.component.astro"
+import { sortPostsDesc } from "./../utilities/helpers"
 
 import * as main from "./../content/index/main.md"
 
@@ -12,26 +14,10 @@ const { categories } = main.frontmatter
 const { frontmatter } = Astro.props
 const { title, subtitle, date, description, keywords, category, image, link, repo, technologies } = frontmatter
 
-const projectPosts = await Astro.glob("./projects/*.md")
-const projects = projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured)
-
-projects.sort((a: any, b: any) => {
-	const A = a.frontmatter.date
-	const B = b.frontmatter.date
-
-	let comparison = 0
-	if (A > B) {
-	comparison = -1
-	} else if (A < B) {
-	comparison = 1
-	} else {
-	comparison = 0
-	}
-
-	return comparison
-})
+const projectPosts = await Astro.glob("./projects/*/*.md")
+const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured), "date")
 const formattedDate = dayjs(date).format(import.meta.env.DATE_FORMAT)
-const selectedCategory = categories.filter((cat: any) => cat.name.toLowerCase() === category.toLowerCase())[0]
+const selectedCategory = categories.filter((cat: any) => cat.slug.toLowerCase() === category.toLowerCase())[0]
 ---
 
 <MainAstroLayout title={title} description={description} keywords={keywords}>
@@ -74,12 +60,12 @@ const selectedCategory = categories.filter((cat: any) => cat.name.toLowerCase() 
 
                     <div class="m-b-400">
                         <div class="btn-group">
-                            { link && <a href={link} class="btn btn-accent" target="_blank">
+                            {link && <LinkAstroComponent href={link} className="btn-accent" target="_blank">
                                 View Demo <i class="fa-solid fa-chevron-right"></i>
-                            </a>}
-                            { repo && <a href={repo} class="btn btn-accent" target="_blank">
+                            </LinkAstroComponent>}
+                            {repo && <LinkAstroComponent href={repo} className="btn-accent" target="_blank">
                                 View Repo <i class="fa-solid fa-chevron-right"></i>
-                            </a>}
+                            </LinkAstroComponent>}
                         </div>
                     </div>
 

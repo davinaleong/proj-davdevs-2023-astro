@@ -1,4 +1,5 @@
 ---
+import LinkAstroComponent from "./../components/link.component.astro"
 import * as main from "./../content/index/main.md"
 
 const { featured, item } = Astro.props
@@ -8,7 +9,7 @@ const featuredClass = featured ? `card-featured` : ``
 const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.slug.toLowerCase() === category.toLowerCase())[0]
 ---
 
-<a class={`card ${featuredClass}`} href={item.url}>
+<LinkAstroComponent href={item.url} linkClass="card" className={featuredClass}>
     <img
         src={`/screenshots/${image}`}
         alt="Project Screenshot"
@@ -21,4 +22,4 @@ const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.sl
         <p class="ff-secondary fsize-600 fw-medium">{title}</p>
         <p>{subtitle}</p>
     </div>
-</a>
+</LinkAstroComponent>

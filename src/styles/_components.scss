@@ -219,7 +219,7 @@ a.card-featured {
   gap: var(--btn-group-gap);
   box-shadow: var(--btn-group-shadow);
 
-  :has(.btn:nth-child(2)) {
+  &:has(.btn:nth-child(2)) .btn {
     --btn-box-shadow: 0;
     border-radius: 0;
 
@@ -242,7 +242,7 @@ a.card-featured {
   --btn-group-clr-border: transparent;
   --btn-group-gap: var(--r-size-200);
 
-  .btn {
+  &:has(.btn:nth-child(2)) .btn {
     --btn-border-radius: var(--r-size-50);
     --btn-box-shadow: #{box-shadow(400)};
     
