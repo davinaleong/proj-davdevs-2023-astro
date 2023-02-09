@@ -4,10 +4,9 @@ import CardAstroComponent from "./../../components/card.component.astro"
 import PaginationAstroComponent from "./../../components/pagination.component.astro"
 
 export async function getStaticPaths({ paginate }: any) {
-  const projectPages = await Astro.glob("./../projects/*.md")
-  projectPages
-    .filter((post) => !post.frontmatter.draft)
-    .sort((a: any, b: any) => {
+  const projectPages = await Astro.glob("./../projects/*/*.md")
+  const projects = projectPages.filter((post) => !post.frontmatter.draft)
+  const pages = projects.sort((a: any, b: any) => {
       const A = a.frontmatter.date
       const B = b.frontmatter.date
 
@@ -22,7 +21,7 @@ export async function getStaticPaths({ paginate }: any) {
 
       return comparison
     })
-  return paginate(projectPages, { pageSize: import.meta.env.PER_PAGE })
+  return paginate(pages, { pageSize: import.meta.env.PER_PAGE })
 }
 
 const { page } = Astro.props

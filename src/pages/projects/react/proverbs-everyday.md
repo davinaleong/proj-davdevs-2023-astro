@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../project-item.astro"
 title: "Proverbs Everyday"
 subtitle: "React App that Displays Bible Proverbs"
 date: "2020-01-15"

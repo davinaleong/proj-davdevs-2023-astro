@@ -1,7 +1,7 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../project-item.astro"
 title: "Bootstrap 4 Admin Dashboard Template"
-subtitle: "Bootstrao 4 Template"
+subtitle: "Bootstrap 4 Template"
 date: "2022-08-19"
 description: "A simple Bootstrap 4 template ready to use out-of-the-box!"
 keywords: "Davina, Leong, Davina Leong, Personal Website, Bootstrap, Admin, Template, Bootstrap 4 Admin Dashboard Template, HTML, CSS, Font Awesome 5, Bootstrap 4, ParsleyJS, DataTables, MomentJS, Tempus Dominus, DateTimePicker, PrismJS"

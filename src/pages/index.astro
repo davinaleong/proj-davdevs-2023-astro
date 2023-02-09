@@ -11,7 +11,7 @@ import * as main from "./../content/index/main.md"
 
 const { categories, skills, additionalContent } = main.frontmatter
 
-const projectPosts = await Astro.glob("./projects/*.md")
+const projectPosts = await Astro.glob("./projects/*/*.md")
 const projects = projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured)
 
 projects.sort((a: any, b: any) => {

@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../project-item.astro"
 title: "Davina's CMS"
 subtitle: "Laravel CMS"
 date: "2022-04-18"

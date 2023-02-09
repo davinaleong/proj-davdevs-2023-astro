@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../project-item.astro"
 title: "5 HTML, CSS, JS Projects"
 subtitle: "JavaScript Demos"
 date: "2022-08-11"
