@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, CMS, HTML, CSS, buttons, animation, css 
 category: "React"
 image: "the-beloveds-blog.png"
 link: "https://the-beloveds-blog.com/"
+repo: "https://github.com/davinaleong/proj-the-beloveds-blog-2023"
 featured: true
 technologies:
   [

@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, HTML, CSS, buttons, animation, css anima
 category: "CSS"
 image: "css-button-hover-animations.png"
 link: "https://davinaleong.github.io/proj-button-animations/"
+repo: "https://github.com/davinaleong/proj-button-animations"
 featured: false
 technologies:
   [

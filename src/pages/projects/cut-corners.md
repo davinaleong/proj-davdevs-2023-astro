@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, HTML, CSS, buttons, animation, css anima
 category: "CSS"
 image: "cut-corners.png"
 link: "https://davinaleong.github.io/proj-cut-corners/"
+repo: "https://github.com/davinaleong/proj-cut-corners"
 featured: false
 technologies:
   [

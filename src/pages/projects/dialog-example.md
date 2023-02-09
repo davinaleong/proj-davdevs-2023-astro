@@ -8,6 +8,7 @@ keywords: "davina, davina leong, leong, dialog, dialog element, new, html, html5
 category: "JS"
 image: "dialog-example.png"
 link: "https://davinaleong.github.io/proj-dialog-example/"
+repo: "https://github.com/davinaleong/proj-dialog-example"
 featured: false
 technologies:
   [

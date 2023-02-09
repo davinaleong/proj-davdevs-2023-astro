@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, Personal Website, Colour, Color, Palette
 category: "JS"
 image: "color-palettes.png"
 link: "https://davinaleong.github.io/proj-color-palette/"
+repo: "https://github.com/davinaleong/proj-color-palette-v2"
 featured: false
 technologies:
   [

@@ -8,6 +8,7 @@ keywords: "davina, davina leong, leong, password, password visibility, visibilit
 category: "JS"
 image: "password-visibility.png"
 link: "https://davinaleong.github.io/password-visibility/"
+repo: "https://github.com/davinaleong/proj-password-visibility"
 featured: true
 technologies:
   [

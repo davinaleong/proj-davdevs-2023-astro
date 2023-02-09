@@ -8,6 +8,7 @@ keywords: "davina, davina leong, leong, slider, image, html, html5, css, css3, j
 category: "JS"
 image: "image-sliders.png"
 link: "https://davinaleong.github.io/proj-image-slider/"
+repo: "https://github.com/davinaleong/proj-image-slider"
 featured: true
 technologies:
   [

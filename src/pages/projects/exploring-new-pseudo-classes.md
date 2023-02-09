@@ -8,6 +8,7 @@ keywords: "davina, davina leong, leong, pseudo, pseudo class, new, html, html5, 
 category: "CSS"
 image: "exploring-new-pseudo-classes.png"
 link: "https://davinaleong.github.io/proj-exploring-new-pseudo-classes/"
+repo: "https://github.com/davinaleong/proj-exploring-new-pseudo-classes"
 featured: false
 technologies:
   [

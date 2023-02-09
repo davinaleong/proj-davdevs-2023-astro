@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, Personal Website, Bootstrap, Admin, Temp
 category: "Bootstrap"
 image: "b4-admin-template.png"
 link: "https://davinaleong.github.io/proj-b4-admin-template/"
+repo: "https://github.com/davinaleong/proj-b4-admin-template"
 featured: false
 technologies:
   [

@@ -8,6 +8,7 @@ keywords: "davina, davina leong, leong, line, clamp, webkit"
 category: "CSS"
 image: "line-clamp.png"
 link: "https://davinaleong.github.io/proj-line-clamp/"
+repo: "https://github.com/davinaleong/proj-line-clamp"
 featured: false
 technologies:
   [

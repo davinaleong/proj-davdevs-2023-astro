@@ -8,6 +8,7 @@ keywords: "davina, davina leong, leong, joke, jokes, joke generator, pun, puns, 
 category: "JS"
 image: "joke-generator.png"
 link: "https://davinas-cms.herokuapp.com/frontend/joke-generator"
+repo: ""
 featured: true
 technologies:
   [

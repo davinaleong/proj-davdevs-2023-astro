@@ -8,6 +8,7 @@ keywords: "label Processor, label, Processor, HTML Template, HTML, CSS, jQuery, 
 category: "JS"
 image: "randomise-labels.png"
 link: "https://davinaleong.github.io/proj-randomise-labels/"
+repo: "https://github.com/davinaleong/proj-randomise-names"
 featured: false
 technologies:
   [

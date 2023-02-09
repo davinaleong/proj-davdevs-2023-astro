@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, Personal Website, Davina Devs, Davina-De
 category: "JS"
 image: "dav-devs.png"
 link: "https://davina-devs.com/"
+repo: "https://github.com/davinaleong/proj-davdevs-2023-astro"
 featured: true
 technologies:
   [

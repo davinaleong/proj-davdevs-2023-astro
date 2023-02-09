@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, Personal Website, Resume, Template, Resu
 category: "HTML"
 image: "resume-html-template.png"
 link: "https://davinaleong.github.io/proj-resume-html-template/"
+repo: "https://github.com/davinaleong/proj-resume-template"
 featured: false
 technologies:
   [

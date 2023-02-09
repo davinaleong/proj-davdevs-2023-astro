@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, Personal Website, Pokemon, Template, Pok
 category: "HTML"
 image: "pokemon-teams-template.png"
 link: "https://davinaleong.github.io/proj-pokemon-teams-template/"
+repo: "https://github.com/davinaleong/proj-pokemon-teams-template"
 featured: false
 technologies:
   [

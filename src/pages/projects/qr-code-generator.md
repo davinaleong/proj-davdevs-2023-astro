@@ -8,6 +8,7 @@ keywords: "davina, davina leong, leong, qr code generator, qr, qr code, generato
 category: "JS"
 image: "qr-code-generator.png"
 link: "https://davinaleong.github.io/proj-qr-code-generator/"
+repo: "https://github.com/davinaleong/proj-qr-code-generator"
 featured: false
 technologies:
   [

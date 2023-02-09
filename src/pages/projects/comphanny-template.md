@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, Personal Website, Comphanny, Template, C
 category: "Bootstrap"
 image: "comphanny-template.png"
 link: "https://davinaleong.github.io/proj-comphanny-template/"
+repo: "https://github.com/davinaleong/proj-comphanny-template"
 featured: false
 technologies:
   [

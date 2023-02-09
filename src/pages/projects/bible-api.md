@@ -8,6 +8,7 @@ keywords: "Davina, Leong, Davina Leong, Personal Website, Bible API, Backend, HT
 category: "Laravel"
 image: "qr-code-generator.png"
 link: "http://45.33.120.254/"
+repo: "https://github.com/davinaleong/proj-bible-api"
 featured: false
 technologies:
   [
