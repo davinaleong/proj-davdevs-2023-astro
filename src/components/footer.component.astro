@@ -1,6 +1,12 @@
 ---
 import dayjs from "dayjs"
 
+import LinkAstroComponent from "./../components/link.component.astro"
+
+import * as main from "./../content/index/main.md"
+
+const { linkedinLink, githubLink, devLink, jsfiddleLink } = main.frontmatter
+
 const {
     meta_title = "",
     meta_author = ""
@@ -28,13 +34,13 @@ if (nowYear > releasedAtYear) {
               data-element="main-footer-contact-nav"
             >
               <li class="nav-list-item">
-                <a
+                <LinkAstroComponent
                   href="mailto:leong.shi.yun@gmail.com"
-                  class="btn btn-footer"
-                >
+                  className="btn-footer"
+                  >
                   <i class="fa-duotone fa-envelope"></i>
                   leong.shi.yun@gmail.com
-                </a>
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
                 <div class="btn btn-footer">
@@ -52,19 +58,29 @@ if (nowYear > releasedAtYear) {
           <nav class="main-footer-nav">
             <ul class="nav-list" role="list">
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">Home</a>
+                <LinkAstroComponent href="/" className="btn-footer">
+                  Home
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">About</a>
+                <LinkAstroComponent href="/about" className="btn-footer">
+                  About
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">Portfolio</a>
+                <LinkAstroComponent href="/portfolio" className="btn-footer">
+                  Portfolio
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">Contact</a>
+                <LinkAstroComponent href="/resume" className="btn-footer">
+                  Resume
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">Try Me!</a>
+                <LinkAstroComponent href="#" className="btn-footer" dataElement="btn-footer-joke">
+                  Try Me!
+                </LinkAstroComponent>
               </li>
             </ul>
           </nav>
@@ -77,24 +93,24 @@ if (nowYear > releasedAtYear) {
           <nav class="main-footer-nav">
             <ul class="nav-list" role="list">
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">
+                <LinkAstroComponent href={linkedinLink} target="_blank" className="btn-footer">
                   <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">
+                <LinkAstroComponent href={githubLink} target="_blank" className="btn-footer">
                   <i class="fa-brands fa-github"></i> GitHub
-                </a>
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">
+                <LinkAstroComponent href={devLink} target="_blank" className="btn-footer">
                   <i class="fa-brands fa-dev"></i> DEV
-                </a>
+                </LinkAstroComponent>
               </li>
               <li class="nav-list-item">
-                <a href="#" class="btn btn-footer">
+                <LinkAstroComponent href={jsfiddleLink} target="_blank" className="btn-footer">
                   <i class="fa-brands fa-jsfiddle"></i> JsFiddle
-                </a>
+                </LinkAstroComponent>
               </li>
             </ul>
           </nav>

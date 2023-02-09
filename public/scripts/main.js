@@ -89,6 +89,9 @@ const btnHeaderJokeMobileEl = document.querySelector(
 const btnHeaderJokeEl = document.querySelector(
   `[data-element="btn-header-joke"]`
 )
+const btnFooterJokeEl = document.querySelector(
+  `[data-element="btn-footer-joke"]`
+)
 const modalJokesEl = document.querySelector(`[data-element="modal-jokes"]`)
 
 
@@ -100,6 +103,11 @@ btnHeaderJokeEl.addEventListener(`click`, (e) => {
   e.preventDefault()
   modalJokesEl.setAttribute(ariaExpandedAttr, true)
 })
+btnFooterJokeEl.addEventListener(`click`, (e) => {
+  e.preventDefault()
+  modalJokesEl.setAttribute(ariaExpandedAttr, true)
+})
+
 
 
 // Image Modal
