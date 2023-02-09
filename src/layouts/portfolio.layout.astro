@@ -2,6 +2,7 @@
 import MainAstroLayout from "./main.layout.astro"
 import CardAstroComponent from "./../components/card.component.astro"
 import PaginationAstroComponent from "./../components/pagination.component.astro"
+import LinkAstroComponent from "./../components/link.component.astro"
 
 import * as main from "./../content/index/main.md"
 const { categories } = main.frontmatter
@@ -63,22 +64,22 @@ if (category) {
       <h2 class="ff-secondary fw-regular clr-yellow-500 m-v-b-200">Categories</h2>
 
       <div class="btn-group btn-group-project-categories m-b-400">
-        <a
+        <LinkAstroComponent
           href={portfolioRoute}
-          class={`btn btn-project-category clr-gray-50`}
-          data-active={selectedCategory === null}
+          className="btn-project-category clr-gray-50"
+          active={selectedCategory === null}
         >
           <i class="fa-solid fa-infinity"></i> All
-        </a>
+        </LinkAstroComponent>
         {
           publishedCategories.map(({ label, slug, color, icon }: any) => (
-            <a
+            <LinkAstroComponent
               href={`${categoriesRoute}${slug}/1`}
-              class={`btn btn-project-category ${color}`}
-              data-active={selectedCategory && selectedCategory.slug === slug}
+              className={`btn-project-category ${color}`}
+              active={selectedCategory && selectedCategory.slug === slug}
             >
               <i class={`fa-brands ${icon}`}></i> {label}
-            </a>
+            </LinkAstroComponent>
           ))
         }
       </div>
