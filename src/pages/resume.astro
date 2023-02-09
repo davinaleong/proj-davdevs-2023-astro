@@ -1,24 +1,23 @@
 ---
-import functions from "./../functions"
-
 import MainAstroLayout from "./../layouts/main.layout.astro"
 import ResumeItemAstroComponent from "./../components/resume-item.component.astro"
+import { sort, sortPostsDesc } from "./../utilities/helpers"
 
 import profilePic from "./../styles/images/profile-pic.png"
 
 import * as main from "./../content/resume/main.md"
 
 const skillPosts = await Astro.glob('./../content/resume/skills/*.md')
-const skills = functions.sortArray(skillPosts.filter(post => !post.frontmatter.draft))
+const skills = sort(skillPosts.filter(post => !post.frontmatter.draft), "sortOrder")
 
 const experiencePosts = await Astro.glob('./../content/resume/experience/*.md')
-const experiences = functions.sortArrayDesc(experiencePosts.filter(post => !post.frontmatter.draft))
+const experiences = sortPostsDesc(experiencePosts.filter(post => !post.frontmatter.draft), "start")
 
 const educationPosts = await Astro.glob('./../content/resume/education/*.md')
-const education = functions.sortArrayDesc(educationPosts.filter(post => !post.frontmatter.draft))
+const education = sortPostsDesc(educationPosts.filter(post => !post.frontmatter.draft), "start")
 
 const certificatesPosts = await Astro.glob('./../content/resume/certificates/*.md')
-const certificates = functions.sortArrayDesc(certificatesPosts.filter(post => !post.frontmatter.draft))
+const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontmatter.draft), "start")
 ---
 
 <MainAstroLayout className="resume | clr-gray-900 bg-white">

@@ -1,0 +1,58 @@
+---
+import PortfolioAstroLayout from "./../../../../layouts/portfolio.layout.astro"
+import * as main from "./../../../../content/index/main.md"
+
+
+export async function getStaticPaths({ paginate }: any) {
+  const { categories } = main.frontmatter
+  const publishedCategories = categories.filter(
+    (category: any) => !category.draft
+  )
+
+  const projectPages = await Astro.glob("./../projects/*/*.md")
+  const publishedProjects = projectPages.filter((post) => !post.frontmatter.draft)
+  const sortedProjects = publishedProjects.sort((a: any, b: any) => {
+      const A = a.frontmatter.date
+      const B = b.frontmatter.date
+
+      let comparison = 0
+      if (A > B) {
+        comparison = -1
+      } else if (A < B) {
+        comparison = 1
+      } else {
+        comparison = 0
+      }
+
+      return comparison
+    })
+
+  // return paginate(pages, {
+  //   pageSize: import.meta.env.PER_PAGE
+  // })
+
+  return publishedCategories.map((category: any) => {
+    const projects = projectPages.filter((post) => !post.frontmatter.draft && post.frontmatter.category === category.slug)
+    const pages = projects.sort((a: any, b: any) => {
+      const A = a.frontmatter.date
+      const B = b.frontmatter.date
+
+      let comparison = 0
+      if (A > B) {
+        comparison = -1
+      } else if (A < B) {
+        comparison = 1
+      } else {
+        comparison = 0
+      }
+
+      return comparison
+    })
+  })
+}
+
+const { category } = Astro.params
+const { page } = Astro.props
+---
+
+<PortfolioAstroLayout page={page}/>

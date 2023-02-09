@@ -4,6 +4,7 @@ import ProjectTypeItemAstroComponent from "./../components/project-type-item.com
 import CardAstroComponent from "./../components/card.component.astro"
 import SkillsCellAstroComponent from "./../components/skills-cell.component.astro"
 import AdditionalContentCellAstroComponent from "./../components/additional-content-cell.component.astro"
+import { sortPostsDesc } from "./../utilities/helpers"
 
 import logo from "./../styles/images/logo-512x512.png"
 
@@ -12,23 +13,7 @@ import * as main from "./../content/index/main.md"
 const { categories, skills, additionalContent } = main.frontmatter
 
 const projectPosts = await Astro.glob("./projects/*/*.md")
-const projects = projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured)
-
-projects.sort((a: any, b: any) => {
-	const A = a.frontmatter.date
-	const B = b.frontmatter.date
-
-	let comparison = 0
-	if (A > B) {
-	comparison = -1
-	} else if (A < B) {
-	comparison = 1
-	} else {
-	comparison = 0
-	}
-
-	return comparison
-})
+const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured), "date")
 ---
 <MainAstroLayout>
 	<section
