@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "Cut Corners Button"
 subtitle: "CSS Animation"
 date: "2022-08-19"

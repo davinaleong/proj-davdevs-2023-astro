@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "New Dialog Element Example"
 subtitle: "JS Demo"
 date: "2022-09-20"

@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "label Processor"
 subtitle: "JS Tool"
 date: "2021-11-20"

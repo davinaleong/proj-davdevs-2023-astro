@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "Color Palettes"
 subtitle: "JS App"
 date: "2020-01-15"

@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "QR Code Generator"
 subtitle: "JS Web App"
 date: "2022-08-19"

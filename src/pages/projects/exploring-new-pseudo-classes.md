@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "Exploring New Pseudo Classes"
 subtitle: "CSS Demo"
 date: "2022-09-20"

@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "TODO Laravel"
 subtitle: "Simple LAMP stack app"
 date: "2020-08-02"

@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "QR Code Generator"
 subtitle: "HTML & JS Template"
 date: "2021-08-28"
