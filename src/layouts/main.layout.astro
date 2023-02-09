@@ -4,7 +4,8 @@ import favicon from "./../styles/images/favicon-32x32.png"
 
 import HeaderAstroComponent from "./../components/header.component.astro"
 import FooterAstroComponent from "./../components/footer.component.astro"
-import ModalAstroComponent from "./../components/modal.component.astro"
+import JokesModalAstroComponent from "./../components/jokes-modal.component.astro"
+import ImageModalAstroComponent from "./../components/image-modal.component.astro"
 
 const response = await fetch(`${import.meta.env.API_URL}misc/apps/${import.meta.env.PUBLIC_APP_SLUG
 }`)
@@ -79,7 +80,8 @@ if (title) {
         Top
       </a>
 
-      <ModalAstroComponent />
+      <JokesModalAstroComponent />
+      <ImageModalAstroComponent />
     </main>
   </body>
 </html>

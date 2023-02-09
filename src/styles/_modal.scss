@@ -15,7 +15,7 @@
   place-items: center;
   overflow-y: auto;
 
-  &[data-open="true"] {
+  &[aria-expanded="true"] {
     display: grid;
   }
 }
@@ -23,6 +23,7 @@
 .modal-dialog {
   --modal-dialog-clr: var(--clr-gray-900);
   --modal-dialog-clr-bg: var(--clr-primary-200);
+  --modal-dialog-padding: var(--r-size-400);
 
   min-width: 50ch;
   max-width: 75ch;
@@ -30,6 +31,7 @@
   background-color: var(--modal-dialog-clr-bg);
   box-shadow: box-shadow(400);
   position: relative;
+  padding: var(--modal-dialog-padding);
 
   &__header {
     padding: var(--r-size-200);
@@ -46,6 +48,10 @@
   &__footer {
     padding: var(--r-size-200);
   }
+}
+
+[data-element="modal-image"] .modal-dialog {
+  max-width: 120ch;
 }
 
 [data-element="modal-close"] {

@@ -264,15 +264,9 @@ $colors: (
 
 // C.2. Font Families
 $families: (
-  "primary": #{Nunito,
-  Arial,
-  sans-serif},
-  "secondary": #{Montserrat,
-  Verdana,
-  sans-serif},
-  "monospace": #{"Anonymous Pro",
-  "Courier New",
-  monospace},
+  "primary": #{Nunito, Arial, sans-serif},
+  "secondary": #{Montserrat, Verdana, sans-serif},
+  "monospace": #{"Ubuntu Mono", "Courier New", monospace},
 );
 
 @function family($family) {

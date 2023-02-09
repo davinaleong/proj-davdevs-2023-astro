@@ -43,47 +43,31 @@
     format("truetype");
 }
 
-// A.3. Anonymous Pro
+// A.3. Ubuntu Mono
 @font-face {
-  font-family: "Anonymous Pro";
+  font-family: "Ubuntu Mono";
   font-weight: 400;
   font-style: normal;
-  src: url("./fonts/anonymous-pro/AnonymousPro-Regular.ttf") format("truetype");
+  src: url("./fonts/ubuntu-mono/UbuntuMono-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Anonymous Pro";
+  font-family: "Ubuntu Mono";
   font-weight: 400;
   font-style: italic;
-  src: url("./fonts/anonymous-pro/AnonymousPro-Italic.ttf") format("truetype");
+  src: url("./fonts/ubuntu-mono/UbuntuMono-Italic.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Anonymous Pro";
-  font-weight: 400;
-  font-style: oblique;
-  src: url("./fonts/anonymous-pro/AnonymousPro-Italic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Anonymous Pro";
+  font-family: "Ubuntu Mono";
   font-weight: 700;
   font-style: normal;
-  src: url("./fonts/anonymous-pro/AnonymousPro-Bold.ttf") format("truetype");
+  src: url("./fonts/ubuntu-mono/UbuntuMono-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Anonymous Pro";
+  font-family: "Ubuntu Mono";
   font-weight: 700;
   font-style: italic;
-  src: url("./fonts/anonymous-pro/AnonymousPro-BoldItalic.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: "Anonymous Pro";
-  font-weight: 700;
-  font-style: oblique;
-  src: url("./fonts/anonymous-pro/AnonymousPro-BoldItalic.ttf")
-    format("truetype");
+  src: url("./fonts/ubuntu-mono/UbuntuMono-BoldItalic.ttf") format("truetype");
 }

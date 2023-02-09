@@ -156,16 +156,19 @@ code,
 .code {
   font-family: var(--ff-monospace);
   font-weight: var(--fw-regular);
+  color: var(--clr-primary-500);
 }
 
 strong,
 .strong {
   font-weight: var(--fw-bold);
+  color: var(--clr-primary-500);
 }
 
 em,
 .em {
   font-style: var(--fs-italic);
+  color: var(--clr-primary-500);
 }
 
 sub,
@@ -332,4 +335,14 @@ a.link-accent {
   align-items: stretch;
   justify-content: var(--nav-list-justify-content);
   flex-wrap: wrap;
+}
+
+// Images
+img:not(.modal-dialog-image) {
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

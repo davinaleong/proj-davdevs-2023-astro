@@ -61,8 +61,28 @@ if (alertEl) {
   })
 }
 
-// Modal
-const openAttr = `data-open`
+// All Modals
+const ariaExpandedAttr = `aria-expanded`
+const modalEls = document.querySelectorAll('.modal')
+modalEls.forEach(modalEl => {
+  modalEl.setAttribute(ariaExpandedAttr, false)
+  
+  const modalCloseEl = modalEl.querySelector(`[data-element="modal-close"]`)
+  const btnModalCloseEl = modalEl.querySelector(
+    `[data-element="btn-modal-close"]`
+  )
+
+  modalCloseEl.addEventListener(`click`, (e) => {
+    e.preventDefault()
+    modalEl.setAttribute(ariaExpandedAttr, false)
+  })
+  btnModalCloseEl.addEventListener(`click`, (e) => {
+    e.preventDefault()
+    modalEl.setAttribute(ariaExpandedAttr, false)
+  })
+})
+
+// Jokes Modal
 const btnHeaderJokeMobileEl = document.querySelector(
   `[data-element="btn-header-joke-mobile"]`
 )
@@ -70,36 +90,31 @@ const btnHeaderJokeEl = document.querySelector(
   `[data-element="btn-header-joke"]`
 )
 const modalJokesEl = document.querySelector(`[data-element="modal-jokes"]`)
-const modalCloseEl = document.querySelector(`[data-element="modal-close"]`)
-const btnModalCloseEl = document.querySelector(
-  `[data-element="btn-modal-close"]`
-)
+
 
 btnHeaderJokeMobileEl.addEventListener(`click`, (e) => {
   e.preventDefault()
-  renderJoke()
+  modalJokesEl.setAttribute(ariaExpandedAttr, true)
 })
 btnHeaderJokeEl.addEventListener(`click`, (e) => {
   e.preventDefault()
-  renderJoke()
+  modalJokesEl.setAttribute(ariaExpandedAttr, true)
 })
 
-modalCloseEl.addEventListener(`click`, (e) => {
-  e.preventDefault()
-  modalJokesEl.removeAttribute(openAttr)
-})
-btnModalCloseEl.addEventListener(`click`, (e) => {
-  e.preventDefault()
-  modalJokesEl.removeAttribute(openAttr)
-})
 
-async function renderJoke() {
-  const response = await fetch(
-    `https://davinas-cms.herokuapp.com/api/davdevs/jokes/random`
-  )
-  const data = await response.json()
-  const { joke } = data
+// Image Modal
+const srcAttr = `src`
+const imgEls = document.querySelectorAll(`img:not(.modal-dialog-image)`)
+const modalImageEl = document.querySelector(`[data-element="modal-image"]`)
 
-  modalJokesEl.querySelector(`[data-element="modal-jokes-body"]`).innerHTML = joke.text.replace(/(?:\r\n|\r|\n)/g, '<br/>')
-  modalJokesEl.setAttribute(openAttr, true)
-}
+imgEls.forEach(imgEl => {
+  imgEl.addEventListener(`click`, (e) => {
+    e.preventDefault()
+    const src = imgEl.getAttribute(srcAttr)
+
+    if (modalImageEl) {
+      modalImageEl.querySelector(`img.modal-dialog-image`).setAttribute(srcAttr, src)
+      modalImageEl.setAttribute(ariaExpandedAttr, true)
+    }
+  })
+})
