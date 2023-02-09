@@ -2,6 +2,7 @@
 import dayjs from "dayjs"
 
 import MainAstroLayout from "./../layouts/main.layout.astro"
+import TechnologyStackItemComponent from "./../components/technology-stack-item.component.astro"
 
 import * as main from "./../content/index/main.md"
 
@@ -88,22 +89,7 @@ const selectedCategory = categories.filter((cat: any) => cat.name.toLowerCase() 
                         Tech Stack
                     </h3>
 
-                    {technologies.map()}
-
-                    <h3 class="ff-secondary fsize-300 fw-medium clr-yellow-300">
-                        Frontend
-                    </h3>
-                    <p class="m-b-400">HTML, CSS</p>
-
-                    <h3 class="ff-secondary fsize-300 fw-medium clr-yellow-300">
-                        Backend
-                    </h3>
-                    <p class="m-b-400">PHP</p>
-
-                    <h3 class="ff-secondary fsize-300 fw-medium clr-yellow-300">
-                        Deployment
-                    </h3>
-                    <p>GitHub Pages</p>
+                    {technologies.map((item: any) => <TechnologyStackItemComponent item={item}/>)}
                 </div>
                 <div class="project-item-cell project-item-cell-content">
                     <h3

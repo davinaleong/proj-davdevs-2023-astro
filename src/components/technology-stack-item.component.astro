@@ -1,4 +1,9 @@
 ---
 const { item } = Astro.props
 const { label, items } = item
+
+const itemStr = items.join(`, `)
 ---
+
+<h3 class="ff-secondary fsize-300 fw-medium clr-yellow-300">{label}</h3>
+<p class="m-b-400">{itemStr}</p>
