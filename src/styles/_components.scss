@@ -212,12 +212,13 @@ a.card-featured {
 .btn-group {
   --btn-group-shadow: #{box-shadow(400)};
   --btn-group-clr-border: var(--clr-gray-700);
+  --btn-group-gap: 0;
 
   display: inline-flex;
-  gap: 0;
+  gap: var(--btn-group-gap);
   box-shadow: var(--btn-group-shadow);
 
-  .btn {
+  :has(.btn:nth-child(2)) {
     --btn-box-shadow: 0;
     border-radius: 0;
 
@@ -231,6 +232,27 @@ a.card-featured {
 
     &:not(:last-child) {
       border-right: thin solid var(--btn-group-clr-border);
+    }
+  }
+}
+
+.btn-group-project-categories {
+  --btn-group-shadow: none;
+  --btn-group-clr-border: transparent;
+  --btn-group-gap: var(--size-r-400);
+
+  .btn {
+    --btn-border-radius: var(--r-size-50);
+    --btn-box-shadow: #{box-shadow(400)};
+    
+    border-radius: var(--btn-border-radius);
+
+    &:first-child {
+      border-radius:  var(--btn-border-radius);
+    }
+
+    &:last-child {
+      border-radius: var(--btn-border-radius);
     }
   }
 }

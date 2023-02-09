@@ -330,6 +330,20 @@ a.link-accent {
   --btn-clr-hover-border: var(--clr-accent-2-500);
 }
 
+.btn-project-category {
+  --btn-padding: var(--size-200);
+  --btn-box-shadow: none;
+  --btn-border-radius: 0;
+
+  --btn-clr: inherit;
+  --btn-clr-bg: var(--clr-gray-900);
+  --btn-clr-border: var(--clr-gray-900);
+
+  --btn-clr-hover: inherit;
+  --btn-clr-hover-bg: var(--clr-gray-800);
+  --btn-clr-hover-border: var(--clr-gray-800);
+}
+
 .btn-top {
   --btn-flex-direction: column;
   --btn-gap: 0;

@@ -5,7 +5,7 @@ const { featured, item } = Astro.props
 const { title, subtitle, category, image } = item.frontmatter
 
 const featuredClass = featured ? `card-featured` : ``
-const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.name.toLowerCase() === category.toLowerCase())[0]
+const selectedCategory = main.frontmatter.categories.filter((cat: any) => cat.slug.toLowerCase() === category.toLowerCase())[0]
 ---
 
 <a class={`card ${featuredClass}`} href={item.url}>

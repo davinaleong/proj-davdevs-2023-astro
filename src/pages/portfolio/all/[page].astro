@@ -1,10 +1,10 @@
 ---
-import MainAstroLayout from "./../../layouts/main.layout.astro"
-import CardAstroComponent from "./../../components/card.component.astro"
-import PaginationAstroComponent from "./../../components/pagination.component.astro"
+import MainAstroLayout from "./../../../layouts/main.layout.astro"
+import CardAstroComponent from "./../../../components/card.component.astro"
+import PaginationAstroComponent from "./../../../components/pagination.component.astro"
 
 export async function getStaticPaths({ paginate }: any) {
-  const projectPages = await Astro.glob("./../projects/*/*.md")
+  const projectPages = await Astro.glob("./../../projects/*/*.md")
   const projects = projectPages.filter((post) => !post.frontmatter.draft)
   const pages = projects.sort((a: any, b: any) => {
       const A = a.frontmatter.date

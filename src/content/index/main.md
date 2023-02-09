@@ -3,6 +3,7 @@ categories:
   [
     {
       name: "HTML",
+      slug: "html",
       title: "HTML/HTML5",
       label: "HTML",
       color: "clr-html-400",
@@ -11,6 +12,7 @@ categories:
     },
     {
       name: "CSS",
+      slug: "css",
       title: "CSS/CSS3",
       label: "CSS",
       color: "clr-css-400",
@@ -19,6 +21,7 @@ categories:
     },
     {
       name: "JS",
+      slug: "javascript",
       title: "JavaScript",
       label: "JavaScript",
       color: "clr-javascript-400",
@@ -27,6 +30,7 @@ categories:
     },
     {
       name: "Bootstrap",
+      slug: "bootstrap",
       title: "Bootstrap",
       label: "Bootstrap",
       color: "clr-bootstrap-400",
@@ -35,6 +39,7 @@ categories:
     },
     {
       name: "React",
+      slug: "react",
       title: "React",
       label: "React",
       color: "clr-react-400",
@@ -43,6 +48,7 @@ categories:
     },
     {
       name: "Laravel",
+      slug: "laravel",
       title: "Laravel",
       label: "Laravel",
       color: "clr-laravel-400",
@@ -51,6 +57,7 @@ categories:
     },
     {
       name: "Astro",
+      slug: "astro",
       title: "Astro SSG",
       label: "Astro SSG",
       color: "clr-astro-400",
