@@ -16,8 +16,8 @@ const {
   categoriesRoute = "categories/"
 } = Astro.props
 
-let paginationRoute = "/portfolio/"
-let selectedCategory = null
+let paginationRoute: string = "/portfolio/"
+let selectedCategory: any = null
 if (category) {
   selectedCategory = categories.filter((cat: any) => cat.slug === category)[0]
   paginationRoute += `categories/${category}/`
@@ -65,7 +65,8 @@ if (category) {
       <div class="btn-group btn-group-project-categories m-b-400">
         <a
           href={portfolioRoute}
-          class="btn btn-project-category clr-gray-50"
+          class={`btn btn-project-category clr-gray-50`}
+          data-active={selectedCategory === null}
         >
           <i class="fa-solid fa-infinity"></i> All
         </a>
@@ -74,6 +75,7 @@ if (category) {
             <a
               href={`${categoriesRoute}${slug}/1`}
               class={`btn btn-project-category ${color}`}
+              data-active={selectedCategory && selectedCategory.slug === slug}
             >
               <i class={`fa-brands ${icon}`}></i> {label}
             </a>

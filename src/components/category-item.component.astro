@@ -1,0 +1,14 @@
+---
+const {
+    item,
+    route = "/portfolio/categories/"
+} = Astro.props
+const { title, color, icon, slug } = item
+---
+
+<div class="ta-center">
+    <a href={`${route}${slug}/1`} class="link-block">
+        <i class={`fa-brands ${icon} ${color} fsize-1000`}></i>
+        <p>{title}</p>
+    </a>
+</div>

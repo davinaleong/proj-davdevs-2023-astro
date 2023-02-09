@@ -201,19 +201,28 @@ sup,
 a,
 a:where(:active, :visited) {
   --clr-link: var(--clr-accent-1-500);
+  --link-opacity: 1;
   --clr-link-hover: var(--clr-accent-2-500);
+  --link-opacity-hover: 1;
 
   color: var(--clr-link);
-  transition: color 0.3s ease-in-out;
+  opacity: var(--link-opacity);
+  transition: all 0.3s ease-in-out;
 }
 
 a:where(:hover) {
   color: var(--clr-link-hover);
+  opacity: var(--link-opacity-hover);
 }
 
 a.link-accent {
   --clr-link: var(--clr-accent-1-500);
   --clr-link-hover: var(--clr-accent-2-500);
+}
+
+a.link-block {
+  --link-opacity: 1;
+  --link-opacity-hover: 0.7;
 }
 
 // Buttons
@@ -230,10 +239,12 @@ a.link-accent {
   --btn-clr: var(--clr-gray-800);
   --btn-clr-bg: var(--clr-gray-50);
   --btn-clr-border: var(--clr-gray-50);
+  --btn-opacity: 1;
 
   --btn-clr-hover: var(--clr-gray-50);
   --btn-clr-hover-bg: var(--clr-gray-800);
   --btn-clr-hover-border: var(--clr-gray-800);
+  --btn-opacity-hover: 1;
 
   display: inline-flex;
   flex-direction: var(--btn-flex-direction);
@@ -248,6 +259,7 @@ a.link-accent {
   border-radius: var(--btn-border-radius);
   text-decoration: none;
   font-size: var(--btn-fsize);
+  opacity: var(--btn-opacity);
   transition: all 0.3s ease-in-out;
 }
 
@@ -255,6 +267,7 @@ a.link-accent {
   color: var(--btn-clr-hover);
   background-color: var(--btn-clr-hover-bg);
   border-color: var(--btn-clr-hover-border);
+  opacity: var(--btn-opacity-hover);
 }
 
 .btn-skip-navigation {
@@ -342,6 +355,16 @@ a.link-accent {
   --btn-clr-hover: inherit;
   --btn-clr-hover-bg: var(--clr-gray-800);
   --btn-clr-hover-border: var(--clr-gray-800);
+
+  &[data-active] {
+    --btn-clr: inherit;
+    --btn-clr-bg: var(--clr-gray-800);
+    --btn-clr-border: var(--clr-gray-800);
+
+    --btn-clr-hover: inherit;
+    --btn-clr-hover-bg: var(--clr-gray-700);
+    --btn-clr-hover-border: var(--clr-gray-700);
+  }
 }
 
 .btn-top {
