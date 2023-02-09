@@ -1,5 +1,5 @@
 ---
-const { page } = Astro.props
+const { page, paginationRoute } = Astro.props
 const { currentPage, lastPage } = page
 
 const firstPage = 1
@@ -75,30 +75,31 @@ if (lastPage >= 9) {
     })
 }
 ---
+
 <ul class="pagination" role="list">
     <li class="pagination-item">
-        <a href={`/portfolio/${firstPage}`} class="pagination-link">
+        <a href={`${paginationRoute}${firstPage}`} class="pagination-link">
             <i class="fa-solid fa-chevrons-left"></i>
         </a>
     </li>
     <li class="pagination-item">
-        <a href={`/portfolio/${prevPage}`} class="pagination-link">
+        <a href={`${paginationRoute}${prevPage}`} class="pagination-link">
             <i class="fa-solid fa-chevron-left"></i>
         </a>
     </li>
     {pages.map(({page, active}: any) => (
         <li class="pagination-item">
             {page === "..." && <span class={`pagination-link`}>{page}</span>}
-            {page !== "..." && <a href={`portfolio/${page}`} class={`pagination-link ${active}`}>{page}</a>}
+            {page !== "..." && <a href={`${paginationRoute}${page}`} class={`pagination-link ${active}`}>{page}</a>}
         </li>
     ))}
     <li class="pagination-item">
-        <a href={`/portfolio/${nextPage}`} class="pagination-link">
+        <a href={`${paginationRoute}${nextPage}`} class="pagination-link">
             <i class="fa-solid fa-chevron-right"></i>
         </a>
     </li>
     <li class="pagination-item">
-        <a href={`/portfolio/${lastPage}`} class="pagination-link">
+        <a href={`${paginationRoute}${lastPage}`} class="pagination-link">
             <i class="fa-solid fa-chevrons-right"></i>
         </a>
     </li>

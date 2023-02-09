@@ -9,7 +9,19 @@ const publishedCategories = categories.filter(
   (category: any) => !category.draft
 )
 
-const { page } = Astro.props
+const {
+  page,
+  category,
+  portfolioRoute = "/1/",
+  categoriesRoute = "categories/"
+} = Astro.props
+
+let paginationRoute = "/portfolio/"
+let selectedCategory = null
+if (category) {
+  selectedCategory = categories.filter((cat: any) => cat.slug === category)[0]
+  paginationRoute += `categories/${category}/`
+}
 ---
 
 <MainAstroLayout>
@@ -22,6 +34,16 @@ const { page } = Astro.props
         <h1 class="ff-secondary fsize-700 fw-medium">
           Portfolio ({page.currentPage}/{page.lastPage})
         </h1>
+        {selectedCategory === null && <p>
+          <span class="badge bg-gray-900 clr-gray-50">
+            <i class="fa-solid fa-infinity"></i> All
+          </span>
+        </p>}
+        {selectedCategory !== null && <p>
+          <span class={`badge bg-gray-900 ${selectedCategory.color}`}>
+            <i class={`fa-brands ${selectedCategory.icon}`}></i> {selectedCategory.name} 
+          </span>
+        </p>}
       </div>
       <div class="section-inner-hero__icon-cell">
         <div class="section-inner-hero__icon-cell__icon-container">
@@ -41,13 +63,19 @@ const { page } = Astro.props
       <h2 class="ff-secondary fw-regular clr-yellow-500 m-v-b-200">Categories</h2>
 
       <div class="btn-group btn-group-project-categories m-b-400">
+        <a
+          href={portfolioRoute}
+          class="btn btn-project-category clr-gray-50"
+        >
+          <i class="fa-solid fa-infinity"></i> All
+        </a>
         {
           publishedCategories.map(({ label, slug, color, icon }: any) => (
             <a
-              href={`portfolio/categories/${slug}/1`}
+              href={`${categoriesRoute}${slug}/1`}
               class={`btn btn-project-category ${color}`}
             >
-              <i class={`fa-brands ${icon}`} /> {label}
+              <i class={`fa-brands ${icon}`}></i> {label}
             </a>
           ))
         }
@@ -67,7 +95,7 @@ const { page } = Astro.props
       </div>
       <!-- ./card-grid -->
 
-      <PaginationAstroComponent page={page} />
+      <PaginationAstroComponent page={page} paginationRoute={paginationRoute}/>
     </div>
   </section>
 </MainAstroLayout>

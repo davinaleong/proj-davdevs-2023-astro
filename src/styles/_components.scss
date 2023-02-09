@@ -344,3 +344,22 @@ a.card-featured {
     text-align: left;
   }
 }
+
+.badge {
+  --badge-clr: var(--clr-gray-50);
+  --badge-bg-clr: var(--clr-gray-900);
+  --badge-padding: var(--r-size-50) var(--r-size-100);
+
+  --badge-gap: var(--r-size-50);
+  --badge-border-radius: var(--r-size-50);
+  --badge-box-shadow: #{box-shadow(400)};
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--badge-gap);
+  color: var(--badge-clr);
+  background-color: var(--badge-bg-clr);
+  padding: var(--badge-padding);
+  border-radius: var(--badge-border-radius);
+  box-shadow: var(--badge-box-shadow);
+}
