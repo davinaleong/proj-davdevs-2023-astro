@@ -11,14 +11,13 @@ featured: false
 technologies:
   [
     {
-      "name": "Frontend",
-      "items":
-        ["HTML", "CSS", "JavaScript", "CSS Grid", "Flexbox", "QRCode.js"],
+      label: "Frontend",
+      items: ["HTML", "CSS", "JavaScript", "CSS Grid", "Flexbox", "QRCode.js"],
     },
-    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
     {
-      "name": "Highlights",
-      "items": ["QR Code library", "Form Validation", "Vanilla JavaScript"],
+      label: "Highlights",
+      items: ["QR Code library", "Form Validation", "Vanilla JavaScript"],
     },
   ]
 draft: 0

@@ -11,8 +11,8 @@ featured: true
 technologies:
   [
     {
-      "name": "Frontend",
-      "items":
+      label: "Frontend",
+      items:
         [
           "HTML",
           "SASS",
@@ -23,8 +23,8 @@ technologies:
           "Typescript",
         ],
     },
-    { "name": "Deployment", "items": ["Netlify"] },
-    { "name": "Highlights", "items": ["React Markdown"] },
+    { label: "Deployment", items: ["Netlify"] },
+    { label: "Highlights", items: ["React Markdown"] },
   ]
 draft: 0
 ---

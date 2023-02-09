@@ -10,10 +10,10 @@ link: "https://davinaleong.github.io/proj-b4-admin-template/"
 featured: false
 technologies:
   [
-    { "name": "Frontend", "items": ["HTML", "Bootstrap 4", "Font Awesome 5"] },
+    { label: "Frontend", items: ["HTML", "Bootstrap 4", "Font Awesome 5"] },
     {
-      "name": "Features",
-      "items":
+      label: "Features",
+      items:
         [
           "ParsleyJS",
           "DataTables",

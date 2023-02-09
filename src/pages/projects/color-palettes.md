@@ -10,8 +10,8 @@ link: "https://davinaleong.github.io/proj-color-palette/"
 featured: false
 technologies:
   [
-    { "name": "Frontend", "items": ["HTML", "CSS", "JavaScript", "JSON"] },
-    { "name": "Highlights", "items": ["CSS Grid", "Flex"] },
+    { label: "Frontend", items: ["HTML", "CSS", "JavaScript", "JSON"] },
+    { label: "Highlights", items: ["CSS Grid", "Flex"] },
   ]
 draft: 0
 ---

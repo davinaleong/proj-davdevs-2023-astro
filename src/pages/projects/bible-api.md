@@ -8,20 +8,12 @@ category: "Laravel"
 image: "qr-code-generator.png"
 link: "http://45.33.120.254/"
 featured: false
-technologies: [
-    {
-        "name": "Frontend / Backend",
-        "items": ["Laravel"]
-    },
-    {
-        "name": "Deployment",
-        "items": ["Linode", "Laravel Forge"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["PHPUnit (Testing)"]
-    }
-]
+technologies:
+  [
+    { label: "Frontend / Backend", items: ["Laravel"] },
+    { label: "Deployment", items: ["Linode", "Laravel Forge"] },
+    { label: "Highlights", items: ["PHPUnit (Testing)"] },
+  ]
 draft: 0
 ---
 

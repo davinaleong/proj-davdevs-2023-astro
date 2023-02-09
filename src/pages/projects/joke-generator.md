@@ -10,9 +10,9 @@ link: "https://davinas-cms.herokuapp.com/frontend/joke-generator"
 featured: true
 technologies:
   [
-    { "name": "Frontend", "items": ["HTML", "CSS", "JavaScript"] },
-    { "name": "Deployment", "items": ["Heroku"] },
-    { "name": "Highlights", "items": ["No jQuery"] },
+    { label: "Frontend", items: ["HTML", "CSS", "JavaScript"] },
+    { label: "Deployment", items: ["Heroku"] },
+    { label: "Highlights", items: ["No jQuery"] },
   ]
 draft: 0
 ---

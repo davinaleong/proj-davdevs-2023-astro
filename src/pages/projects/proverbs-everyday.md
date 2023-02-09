@@ -11,8 +11,8 @@ featured: true
 technologies:
   [
     {
-      "name": "Frontend",
-      "items":
+      label: "Frontend",
+      items:
         [
           "HTML",
           "CSS",
@@ -23,8 +23,8 @@ technologies:
           "Font Awesome 5",
         ],
     },
-    { "name": "Deployment", "items": ["Netlify"] },
-    { "name": "Highlights", "items": ["CSS Grid", "Flex"] },
+    { label: "Deployment", items: ["Netlify"] },
+    { label: "Highlights", items: ["CSS Grid", "Flex"] },
   ]
 draft: 0
 ---

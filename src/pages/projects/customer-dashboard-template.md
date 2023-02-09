@@ -10,8 +10,8 @@ link: "https://customer-dashboard-template.s3-ap-southeast-1.amazonaws.com/dashb
 featured: false
 technologies:
   [
-    { "name": "Frontend", "items": ["Bootstrap", "Admin LTE"] },
-    { "name": "Deployment", "items": ["AWS S3"] },
+    { label: "Frontend", items: ["Bootstrap", "Admin LTE"] },
+    { label: "Deployment", items: ["AWS S3"] },
   ]
 draft: 0
 ---

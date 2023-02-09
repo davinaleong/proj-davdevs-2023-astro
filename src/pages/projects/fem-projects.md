@@ -11,11 +11,11 @@ featured: true
 technologies:
   [
     {
-      "name": "Frontend",
-      "items": ["HTML", "CSS", "CSS Grid", "Flexbox", "JSON"],
+      label: "Frontend",
+      items: ["HTML", "CSS", "CSS Grid", "Flexbox", "JSON"],
     },
-    { "name": "Deployment", "items": ["GitHub Pages"] },
-    { "name": "Highlights", "items": ["CSS Grid"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
+    { label: "Highlights", items: ["CSS Grid"] },
   ]
 draft: 0
 ---

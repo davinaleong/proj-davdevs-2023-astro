@@ -11,10 +11,10 @@ featured: false
 technologies:
   [
     {
-      "name": "Frontend",
-      "items": ["HTML", "CSS", "JSON", "jQuery", "Font Awesome 5"],
+      label: "Frontend",
+      items: ["HTML", "CSS", "JSON", "jQuery", "Font Awesome 5"],
     },
-    { "name": "Highlights", "items": ["CSS Grid", "Flex"] },
+    { label: "Highlights", items: ["CSS Grid", "Flex"] },
   ]
 draft: 0
 ---

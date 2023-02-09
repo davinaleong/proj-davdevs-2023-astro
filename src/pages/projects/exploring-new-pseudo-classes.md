@@ -11,11 +11,11 @@ featured: false
 technologies:
   [
     {
-      "name": "Frontend",
-      "items": ["HTML", "CSS", "JavaScript", "Dialog Element"],
+      label: "Frontend",
+      items: ["HTML", "CSS", "JavaScript", "Dialog Element"],
     },
-    { "name": "Deployment", "items": ["GitHub Pages"] },
-    { "name": "Highlights", "items": ["Dialog Element"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
+    { label: "Highlights", items: ["Dialog Element"] },
   ]
 draft: 0
 ---

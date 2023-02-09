@@ -1,4 +1,5 @@
 ---
+layout: "./../project-item.astro"
 title: "5 HTML, CSS, JS Projects"
 subtitle: "JavaScript Demos"
 date: "2022-08-11"
@@ -10,8 +11,8 @@ link: "https://davinaleong.github.io/proj-five-projects/"
 featured: false
 technologies:
   [
-    { "name": "Frontend", "items": ["HTML", "CSS", "JS"] },
-    { "name": "Deployment", "items": ["GitHub Pages"] },
+    { label: "Frontend", items: ["HTML", "CSS", "JS"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
   ]
 draft: 0
 ---

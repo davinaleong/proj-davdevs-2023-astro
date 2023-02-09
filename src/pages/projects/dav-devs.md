@@ -11,8 +11,8 @@ featured: true
 technologies:
   [
     {
-      "name": "Frontend",
-      "items":
+      label: "Frontend",
+      items:
         [
           "HTML",
           "SASS",
@@ -23,9 +23,9 @@ technologies:
           "React Markdown",
         ],
     },
-    { "name": "Deployment", "items": ["Netlify"] },
-    { "name": "Highlights", "items": ["CSS Grid", "Flex", "Markdown"] },
-    { "name": "Mockups", "items": ["Affinity Designer"] },
+    { label: "Deployment", items: ["Netlify"] },
+    { label: "Highlights", items: ["CSS Grid", "Flex", "Markdown"] },
+    { label: "Mockups", items: ["Affinity Designer"] },
   ]
 draft: 0
 ---

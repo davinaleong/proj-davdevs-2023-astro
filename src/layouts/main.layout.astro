@@ -6,13 +6,14 @@ import HeaderAstroComponent from "./../components/header.component.astro"
 import FooterAstroComponent from "./../components/footer.component.astro"
 import ModalAstroComponent from "./../components/modal.component.astro"
 
-const response = await fetch(`${import.meta.env.API_URL}misc/apps/davdevs`)
+const response = await fetch(`${import.meta.env.API_URL}misc/apps/${import.meta.env.PUBLIC_APP_SLUG
+}`)
 const data = await response.json()
 const { meta_title, meta_description, meta_author, meta_keywords } = data.apps[0]
 
 const {
   className = "clr-gray-50 bg-gray-900",
-  title = meta_title,
+  title,
   description = meta_description,
   keywords = meta_keywords,
 } = Astro.props
@@ -35,6 +36,11 @@ if (className.includes("resume")) {
     </div>
   `
 }
+
+let theTitle = meta_title
+if (title) {
+  theTitle = `${meta_title} - ${title}`
+}
 ---
 
 <html lang="en">
@@ -46,7 +52,7 @@ if (className.includes("resume")) {
     <meta name="description" content={description}/>
     <meta name="keywords" content={keywords}/>
     
-    <title>{title}</title>
+    <title>{theTitle}</title>
 
     <link rel="icon" type="image/png" href={favicon} />
 

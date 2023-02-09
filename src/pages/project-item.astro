@@ -1,0 +1,120 @@
+---
+import dayjs from "dayjs"
+
+import MainAstroLayout from "./../layouts/main.layout.astro"
+
+import * as main from "./../content/index/main.md"
+
+const { categories } = main.frontmatter
+
+const { frontmatter } = Astro.props
+const { title, subtitle, date, description, keywords, category, image, link, repo, technologies } = frontmatter
+
+const formattedDate = dayjs(date).format(import.meta.env.DATE_FORMAT)
+const selectedCategory = categories.filter((cat: any) => cat.name.toLowerCase() === category.toLowerCase())[0]
+---
+
+<MainAstroLayout title={title} description={description} keywords={keywords}>
+	<section
+          id="home"
+          class="section section-primary-200 section-primary-200-to-gray-800 clr-gray-800 section-reverse clr-gray-900"
+        >
+        <div class="section-inner container section-inner-hero">
+            <div class="section-inner-hero__content-cell">
+                <h1 class="ff-secondary fsize-700 fw-medium">Portfolio</h1>
+            </div>
+            <div class="section-inner-hero__icon-cell">
+                <div class="section-inner-hero__icon-cell__icon-container">
+                <i
+                    class="fa-duotone fa-laptop-code section-inner-hero__icon-cell__icon-container__icon clr-yellow-500"
+                ></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="project-info"
+        class="section section-gray-800 section-gray-800-to-gray-900"
+    >
+        <div class="section-inner container">
+            <div class="project-item-grid">
+                <div class="project-item-cell project-item-cell-title">
+                <h2 class="ff-secondary fsize-700 fw-medium clr-yellow-500">{title}</h2>
+                <p class="ff-secondary fsize-500">{subtitle}</p>
+                {selectedCategory && <div>
+                    <div
+                    class={`project-item-category | fsize-300 ${selectedCategory.color} m-b-400`}
+                    >
+                    <i class={`fa-brands ${selectedCategory.icon}`}></i> {selectedCategory.title}
+                    </div>
+                </div>}
+
+                <p class="m-b-400">{description}</p>
+
+                <p>
+                    { link && <a href={link} class="btn btn-accent" target="_blank">
+                        View Demo <i class="fa-solid fa-chevron-right"></i>
+                    </a>}
+                    { repo && <a href={repo} class="btn btn-accent" target="_blank">
+                        View Repo <i class="fa-solid fa-chevron-right"></i>
+                    </a>}
+                </p>
+                </div>
+                <!-- ./project-item-cell -->
+
+                <div class="project-item-cell project-item-cell-image">
+                { image && <img
+                    src={`/screenshots/${image}`}
+                    alt="Project Screenshot"
+                    class="project-item-image"
+                /> }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="project-details section section-gray-900 section-gray-900-to-gray-900"
+    >
+        <div class="section-inner container">
+            <div class="project-item-grid">
+                <div
+                class="project-item-cell project-item-cell-tech-stack ta-center"
+                >
+                    <h3
+                        class="ff-secondary fsize-700 fw-medium clr-yellow-500 m-b-400"
+                    >
+                        Tech Stack
+                    </h3>
+
+                    {technologies.map()}
+
+                    <h3 class="ff-secondary fsize-300 fw-medium clr-yellow-300">
+                        Frontend
+                    </h3>
+                    <p class="m-b-400">HTML, CSS</p>
+
+                    <h3 class="ff-secondary fsize-300 fw-medium clr-yellow-300">
+                        Backend
+                    </h3>
+                    <p class="m-b-400">PHP</p>
+
+                    <h3 class="ff-secondary fsize-300 fw-medium clr-yellow-300">
+                        Deployment
+                    </h3>
+                    <p>GitHub Pages</p>
+                </div>
+                <div class="project-item-cell project-item-cell-content">
+                    <h3
+                        class="ff-secondary fsize-700 fw-medium clr-yellow-500 m-b-400 ta-center"
+                    >
+                        About
+                    </h3>
+
+                    <slot />
+                </div>
+            </div>
+        </div>
+    </section>
+</MainAstroLayout>

@@ -11,8 +11,8 @@ featured: false
 technologies:
   [
     {
-      "name": "Frontend",
-      "items": ["HTML", "CSS", "Bootstrap 4", "SASS", "Font Awesome 5"],
+      label: "Frontend",
+      items: ["HTML", "CSS", "Bootstrap 4", "SASS", "Font Awesome 5"],
     },
   ]
 draft: 0

@@ -10,9 +10,9 @@ link: "https://davinaleong.github.io/proj-image-slider/"
 featured: true
 technologies:
   [
-    { "name": "Frontend", "items": ["HTML", "CSS", "JS"] },
-    { "name": "Deployment", "items": ["GitHub Pages"] },
-    { "name": "Highlights", "items": ["CSS Grid", "Flexbox", "Translate"] },
+    { label: "Frontend", items: ["HTML", "CSS", "JS"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
+    { label: "Highlights", items: ["CSS Grid", "Flexbox", "Translate"] },
   ]
 draft: 0
 ---

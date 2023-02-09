@@ -233,6 +233,14 @@ a.card-featured {
 .project-item-cell {
   display: flex;
   flex-direction: column;
+
+  p, ul, ol {
+    margin-bottom: var(--r-size-200);
+  }
+
+  ul, ol {
+    padding-left: var(--r-size-400);
+  }
 }
 
 .project-item-cell-title {

@@ -8,20 +8,12 @@ category: "CSS"
 image: "cut-corners.png"
 link: "https://davinaleong.github.io/proj-cut-corners/"
 featured: false
-technologies: [
-    {
-        "name": "Frontend",
-        "items": ["HTML", "CSS", "CSS Grid"]
-    },
-    {
-        "name": "Deployment",
-        "items": ["GitHub Pages"]
-    },
-    {
-        "name": "Highlights",
-        "items": ["CSS Animations"]
-    }
-]
+technologies:
+  [
+    { label: "Frontend", items: ["HTML", "CSS", "CSS Grid"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
+    { label: "Highlights", items: ["CSS Animations"] },
+  ]
 draft: 0
 ---
 
@@ -30,4 +22,5 @@ I came across this [Cut Corners tutorial](https://www.youtube.com/watch?v=aW6qEA
 The demo is [here](https://davinaleong.github.io/proj-cut-corners/) and the repo is [here](https://github.com/davinaleong/proj-cut-corners). Feel free to check it out and use the code in your own projects. While credit is appreciated, it's not needed.
 
 Useful links from the video:
+
 - [Clippy](https://bennettfeely.com/clippy/) - To generate **`CSS` clip paths**.

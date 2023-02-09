@@ -10,9 +10,9 @@ link: "https://davinaleong.github.io/proj-line-clamp/"
 featured: false
 technologies:
   [
-    { "name": "Frontend", "items": ["HTML", "CSS", "Webkit"] },
-    { "name": "Deployment", "items": ["GitHub Pages"] },
-    { "name": "Highlights", "items": ["Webkit"] },
+    { label: "Frontend", items: ["HTML", "CSS", "Webkit"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
+    { label: "Highlights", items: ["Webkit"] },
   ]
 draft: 0
 ---

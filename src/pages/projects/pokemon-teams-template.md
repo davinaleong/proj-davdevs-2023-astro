@@ -11,10 +11,10 @@ featured: false
 technologies:
   [
     {
-      "name": "Frontend",
-      "items": ["HTML", "CSS", "SASS", "JSON", "jQuery", "Font Awesome 5"],
+      label: "Frontend",
+      items: ["HTML", "CSS", "SASS", "JSON", "jQuery", "Font Awesome 5"],
     },
-    { "name": "Highlights", "items": ["CSS Grid", "Flex"] },
+    { label: "Highlights", items: ["CSS Grid", "Flex"] },
   ]
 draft: 0
 ---
@@ -23,7 +23,7 @@ This project is the first part of a 2-part project I'm in the midst of building.
 
 I first sketched up the mockups of the app pages in [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
 
-I then built the template in `HTML` and `SASS`, using the [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) [VS Code](https://code.visualstudio.com/) extension to compile the `SASS` scripts.
+I then built the template in `HTML` and `SASS`, using the [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemlabel=ritwickdey.live-sass) [VS Code](https://code.visualstudio.com/) extension to compile the `SASS` scripts.
 
 This template features **CSS Grid** and **Flex**. **CSS Grid** is used to lay out the main components like the sidebar and main sections, and **Flex** is used to lay out the Team-cards.
 

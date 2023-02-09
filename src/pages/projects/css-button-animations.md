@@ -10,9 +10,9 @@ link: "https://davinaleong.github.io/proj-button-animations/"
 featured: false
 technologies:
   [
-    { "name": "Frontend", "items": ["HTML", "CSS", "Flexbox"] },
-    { "name": "Deployment", "items": ["GitHub Pages"] },
-    { "name": "Highlights", "items": ["CSS Animations"] },
+    { label: "Frontend", items: ["HTML", "CSS", "Flexbox"] },
+    { label: "Deployment", items: ["GitHub Pages"] },
+    { label: "Highlights", items: ["CSS Animations"] },
   ]
 draft: 0
 ---

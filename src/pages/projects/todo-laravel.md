@@ -10,10 +10,10 @@ link: ""
 featured: false
 technologies:
   [
-    { "name": "Frontend", "items": ["Bootstrap 4", "SB Admin 2"] },
-    { "name": "Backend", "items": ["Laravel", "MySQL"] },
-    { "name": "Deployment", "items": ["Heroku"] },
-    { "name": "Highlights", "items": ["Heroku", "Laravel"] },
+    { label: "Frontend", items: ["Bootstrap 4", "SB Admin 2"] },
+    { label: "Backend", items: ["Laravel", "MySQL"] },
+    { label: "Deployment", items: ["Heroku"] },
+    { label: "Highlights", items: ["Heroku", "Laravel"] },
   ]
 draft: 1
 ---

@@ -1,24 +1,32 @@
 ---
-title: "Name Processor"
+title: "label Processor"
 subtitle: "JS Tool"
 date: "2021-11-20"
-description: "A tool to shuffle and/or split names into groups."
-keywords: "Name Processor, Name, Processor, HTML Template, HTML, CSS, jQuery, Bootstrap 5, Font Awesome 5, Flex, JavaScript, JS"
+description: "A tool to shuffle and/or split labels into groups."
+keywords: "label Processor, label, Processor, HTML Template, HTML, CSS, jQuery, Bootstrap 5, Font Awesome 5, Flex, JavaScript, JS"
 category: "JS"
-image: "randomise-names.png"
-link: "https://davinaleong.github.io/proj-randomise-names/"
+image: "randomise-labels.png"
+link: "https://davinaleong.github.io/proj-randomise-labels/"
 featured: false
 technologies:
   [
-            {
-                "name": "Frontend",
-                "items": ["HTML", "CSS", "JavaScript", "jQuery", "Font Awesome 5", "Bootstrap 5"]
-            }
-        ]
+    {
+      label: "Frontend",
+      items:
+        [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jQuery",
+          "Font Awesome 5",
+          "Bootstrap 5",
+        ],
+    },
+  ]
 draft: 0
 ---
 
-This is a tool I created for my church group. The tool shuffles the names. There are 2 forms. The first just shuffles the names. The second splits names by a number specified by the user. The user can also toggle shuffling of names too.
+This is a tool I created for my church group. The tool shuffles the labels. There are 2 forms. The first just shuffles the labels. The second splits labels by a number specified by the user. The user can also toggle shuffling of labels too.
 
 Credit to the [StackOverflow](https://stackoverflow.com/) for solutions to randomising and splitting array into chunks:
 
