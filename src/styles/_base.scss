@@ -215,6 +215,12 @@ a:where(:hover) {
   opacity: var(--link-opacity-hover);
 }
 
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--r-size-50);
+}
+
 a.link-accent {
   --clr-link: var(--clr-accent-1-500);
   --clr-link-hover: var(--clr-accent-2-500);

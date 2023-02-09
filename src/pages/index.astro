@@ -4,6 +4,7 @@ import ProjectTypeItemAstroComponent from "./../components/category-item.compone
 import CardAstroComponent from "./../components/card.component.astro"
 import SkillsCellAstroComponent from "./../components/skills-cell.component.astro"
 import AdditionalContentCellAstroComponent from "./../components/additional-content-cell.component.astro"
+import LinkAstroComponent from "./../components/link.component.astro"
 import { sortPostsDesc } from "./../utilities/helpers"
 
 import logo from "./../styles/images/logo-512x512.png"
@@ -80,9 +81,9 @@ const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.d
 				</div>
 
 				<p class="ta-center p-y-400">
-					<a href="/portfolio/1" class="btn btn-accent">
+					<LinkAstroComponent href="/portfolio/1" className="btn-accent">
 						View All <i class="fa-solid fa-chevron-right"></i>
-					</a>
+					</LinkAstroComponent>
 				</p>
 			</div>
 		</div>
@@ -104,9 +105,9 @@ const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.d
 			</div>
 
 			<p class="ta-center p-v-b-400">
-				<a href="/about#all-skills" class="btn btn-accent">
+				<LinkAstroComponent href="/about#all-skills" className="btn-accent">
 					View All <i class="fa-solid fa-chevron-right"></i>
-				</a>
+				</LinkAstroComponent>
 			</p>
 		</div>
 	</section>

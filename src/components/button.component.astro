@@ -1,0 +1,17 @@
+---
+const {
+    type = "button",
+    btnClass = "btn",
+    className = "",
+    active = false,
+    dataElement = ""
+} = Astro.props
+---
+<button
+    type={type}
+    class={`${btnClass} ${className}`}
+    data-element={dataElement}
+    data-active={active}
+    >
+    <slot />
+</button>
