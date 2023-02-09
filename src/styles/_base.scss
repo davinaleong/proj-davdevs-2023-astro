@@ -180,6 +180,10 @@ sup,
   font-size: var(--fsize-300);
 }
 
+[disabled] {
+  cursor: not-allowed;
+}
+
 // Containers
 .content {
   // padding-top: var(--header-height);
@@ -267,6 +271,14 @@ a.link-block {
   font-size: var(--btn-fsize);
   opacity: var(--btn-opacity);
   transition: all 0.3s ease-in-out;
+
+  .fa-spin {
+    display: none;
+  }
+
+  &[disabled] .fa-spin {
+    display: inline;
+  }
 }
 
 .btn:where(:hover) {
@@ -347,6 +359,16 @@ a.link-block {
   --btn-clr-hover: var(--clr-gray-900);
   --btn-clr-hover-bg: var(--clr-accent-2-500);
   --btn-clr-hover-border: var(--clr-accent-2-500);
+
+  &[disabled] {
+    --btn-clr: var(--clr-gray-900);
+    --btn-clr-bg: var(--clr-gray-600);
+    --btn-clr-border: var(--clr-gray-600);
+
+    --btn-clr-hover: var(--clr-gray-900);
+    --btn-clr-hover-bg: var(--clr-gray-600);
+    --btn-clr-hover-border: var(--clr-gray-600);
+  }
 }
 
 .btn-project-category {

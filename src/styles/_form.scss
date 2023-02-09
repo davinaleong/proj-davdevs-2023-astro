@@ -10,6 +10,10 @@
   gap: var(--size-100);
 }
 
+.form-error-list {
+  padding-left: var(--r-size-400);
+}
+
 .input-group {
   --clr-input-group: var(--clr-gray-50);
   --clr-input-group-bg: var(--clr-gray-900);

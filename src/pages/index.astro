@@ -10,8 +10,11 @@ import { sortPostsDesc } from "./../utilities/helpers"
 import logo from "./../styles/images/logo-512x512.png"
 
 import * as main from "./../content/index/main.md"
+const { contactAction, categories, skills, additionalContent } = main.frontmatter
 
-const { categories, skills, additionalContent } = main.frontmatter
+const response = await fetch(`${import.meta.env.API_URL}misc/messageTypes/${import.meta.env.PUBLIC_APP_SLUG}/`)
+const data = await response.json()
+const { messageTypes } = data
 
 const projectPosts = await Astro.glob("./projects/*/*.md")
 const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured), "date")
@@ -123,84 +126,91 @@ const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.d
 			Any Enquires?
 		</h2>
 
-			<form action="" method="post" class="form-grid">
+			<form action={contactAction} method="post" class="form-grid" data-element="form-contact">
 				<div class="form-group form-cell-half">
-				<label for="name" class="visually-hidden">Name</label>
-				<div class="input-group">
-					<div class="input-addon">
-					<i class="fa-duotone fa-user"></i>
+					<label for="name" class="visually-hidden">Name</label>
+					<div class="input-group">
+						<div class="input-addon">
+							<i class="fa-duotone fa-user"></i>
+						</div>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							class="form-input"
+							placeholder="Name"
+							/>
 					</div>
-					<input
-					type="text"
-					name="name"
-					id="name"
-					class="form-input"
-					placeholder="Name"
-					/>
-				</div>
-				</div>
-				<div class="form-group form-cell-half">
-				<label for="email" class="visually-hidden">Email</label>
-				<div class="input-group">
-					<div class="input-addon">
-					<i class="fa-duotone fa-envelope"></i>
-					</div>
-					<input
-					type="email"
-					name="email"
-					id="email"
-					class="form-input"
-					placeholder="Email"
-					/>
-				</div>
 				</div>
 				<div class="form-group form-cell-half">
-				<label for="phone" class="visually-hidden">Phone</label>
-				<div class="input-group">
-					<div class="input-addon">
-					<i class="fa-duotone fa-phone"></i>
+					<label for="email" class="visually-hidden">Email</label>
+					<div class="input-group">
+						<div class="input-addon">
+							<i class="fa-duotone fa-envelope"></i>
+						</div>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							class="form-input"
+							placeholder="Email"
+							/>
 					</div>
-					<input
-					type="tel"
-					name="phone"
-					id="phone"
-					class="form-input"
-					placeholder="Phone"
-					/>
-				</div>
 				</div>
 				<div class="form-group form-cell-half">
-				<label for="email" class="visually-hidden">Subject</label>
-				<div class="input-group">
-					<div class="input-addon">
-					<i class="fa-duotone fa-pen"></i>
+					<label for="phone_number" class="visually-hidden">Phone</label>
+					<div class="input-group">
+						<div class="input-addon">
+							<i class="fa-duotone fa-phone"></i>
+						</div>
+						<input
+							type="tel"
+							name="phone_number"
+							id="phone_number"
+							class="form-input"
+							placeholder="Phone Number"
+							/>
 					</div>
-					<select name="subject" id="subject" class="form-input">
-					<option value="">Subject</option>
-					<option value="job">Hire Me?</option>
-					<option value="hangout">Have a coffee?</option>
-					</select>
 				</div>
+				<div class="form-group form-cell-half">
+					<label for="email" class="visually-hidden">Subject</label>
+					<div class="input-group">
+						<div class="input-addon">
+							<i class="fa-duotone fa-pen"></i>
+						</div>
+						<select name="subject" id="subject" class="form-input">
+							<option value="">- Select -</option>
+							{ messageTypes.data.map((messageType: any) => (
+								<option value={messageType.id}>{messageType.title}</option>
+							)) }
+						</select>
+					</div>
 				</div>
 				<div class="form-group form-cell-full">
-				<label for="message" class="visually-hidden">Message</label>
-				<div class="input-group">
-					<div class="input-addon">
-					<i class="fa-duotone fa-message"></i>
+					<label for="message" class="visually-hidden">Message</label>
+					<div class="input-group">
+						<div class="input-addon">
+							<i class="fa-duotone fa-message"></i>
+						</div>
+						<textarea
+							name="message"
+							id="message"
+							class="form-input"
+							placeholder="Message"
+							rows="4"
+						></textarea>
 					</div>
-					<textarea
-					name="message"
-					id="message"
-					class="form-input"
-					placeholder="Message"
-					rows="4"
-					></textarea>
 				</div>
+				<div class="form-cell-full" data-element="status">
+					<ul class="form-error-list">
+						<li class="clr-red-400">Error</li>
+						<li class="clr-green-400">Success</li>
+					</ul>
 				</div>
 				<div class="form-submit form-cell-full">
-				<button type="submit" class="btn btn-accent">
-					Send Message <i class="fa-duotone fa-paper-plane"></i>
-				</button>
+					<button type="submit" class="btn btn-accent" disabled>
+						Send Message <i class="fa-duotone fa-paper-plane"></i> <i class="fa-solid fa-circle-notch fa-spin"></i>
+					</button>
 				</div>
 			</form>
 		</div>
