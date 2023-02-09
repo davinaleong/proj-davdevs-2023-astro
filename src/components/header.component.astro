@@ -1,4 +1,6 @@
 ---
+import LinkAstroComponent from "./../components/link.component.astro"
+
 const {
   alertHtml = ""
 } = Astro.props
@@ -9,37 +11,33 @@ const {
     <nav class="main-nav" data-element="main-nav-mobile">
       <ul class="nav-list" role="list">
         <li class="nav-list-item">
-          <a
-            href="#"
-            class="btn btn-header"
-            data-element="btn-header-joke-mobile"
-          >
-            <i class="fa-duotone fa-face-laugh-beam"></i>
-          </a>
+          <LinkAstroComponent href="#" className="btn-header" dataElement="btn-header-joke-mobile">
+						<i class="fa-duotone fa-face-laugh-beam"></i>
+					</LinkAstroComponent>
         </li>
         <li class="nav-list-item">
-          <a
-            href="#"
-            class="btn btn-header"
-            data-element="main-header-expand"
-          >
-            <i class="fa-solid fa-bars"></i>
-          </a>
+          <LinkAstroComponent href="#" className="btn-header" dataElement="main-header-expand">
+						<i class="fa-solid fa-bars"></i>
+					</LinkAstroComponent>
         </li>
       </ul>
     </nav>
 
-    <a href="#" class="btn btn-header" data-element="main-header-close">
+    <LinkAstroComponent href="#" className="btn-header" dataElement="main-header-close">
       <i class="fa-solid fa-times"></i>
-    </a>
+    </LinkAstroComponent>
 
     <nav class="main-nav" data-element="main-nav-left">
       <ul class="nav-list" role="list">
         <li class="nav-list-item">
-          <a href="/about" class="btn btn-header">About</a>
+          <LinkAstroComponent href="/about" className="btn-header">
+						About
+					</LinkAstroComponent>
         </li>
         <li class="nav-list-item">
-          <a href="/portfolio/1" class="btn btn-header">Portfolio</a>
+          <LinkAstroComponent href="/portfolio/1" className="btn-header">
+						Portfolio
+					</LinkAstroComponent>
         </li>
       </ul>
     </nav>
@@ -47,11 +45,11 @@ const {
     <nav class="main-nav" data-element="main-nav-center">
       <ul class="nav-list" role="list">
         <li class="nav-list-item">
-          <a href="/" class="btn btn-header">
-            <div class="brand-line"></div>
+          <LinkAstroComponent href="/" className="btn-header">
+						<div class="brand-line"></div>
             <div class="ff-secondary fsize-500">D/D</div>
             <div class="brand-line"></div>
-          </a>
+					</LinkAstroComponent>
         </li>
       </ul>
     </nav>
@@ -59,15 +57,14 @@ const {
     <nav class="main-nav" data-element="main-nav-right">
       <ul class="nav-list" role="list">
         <li class="nav-list-item">
-          <a href="/resume" class="btn btn-header">Resume</a>
+          <LinkAstroComponent href="/resume" className="btn-header">
+						Resume
+					</LinkAstroComponent>
         </li>
         <li class="nav-list-item">
-          <a
-            href="#"
-            class="btn btn-header"
-            data-element="btn-header-joke"
-            >Try Me!</a
-          >
+          <LinkAstroComponent href="#" className="btn-header" dataElement="btn-header-joke">
+						Try Me!
+					</LinkAstroComponent>
         </li>
       </ul>
     </nav>

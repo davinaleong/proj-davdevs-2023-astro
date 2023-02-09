@@ -3,14 +3,16 @@ const {
     href = "#",
     linkClass = "btn",
     className = "",
-    target = "_blank",
-    active = false
+    target = "_self",
+    active = false,
+    dataElement = "",
 } = Astro.props
 ---
 <a
     href={href}
     class={`${linkClass} ${className}`}
     target={target}
+    data-element={dataElement}
     data-active={active}
     >
     <slot />

@@ -6,6 +6,7 @@ import HeaderAstroComponent from "./../components/header.component.astro"
 import FooterAstroComponent from "./../components/footer.component.astro"
 import JokesModalAstroComponent from "./../components/jokes-modal.component.astro"
 import ImageModalAstroComponent from "./../components/image-modal.component.astro"
+import LinkAstroComponent from "./../components/link.component.astro"
 
 const response = await fetch(`${import.meta.env.API_URL}misc/apps/${import.meta.env.PUBLIC_APP_SLUG
 }`)
@@ -66,9 +67,9 @@ if (title) {
     ></script>
   </head>
   <body id="top" class={className}>
-    <a href="#main" class="btn btn-accent btn-skip-navigation">
+    <LinkAstroComponent href="#main" className="btn-accent btn-skip-navigation">
       Skip Navigation
-    </a>
+    </LinkAstroComponent>
 
     <main id="main" class="content">
       <HeaderAstroComponent alertHtml={alertHtml} />
@@ -79,10 +80,10 @@ if (title) {
 
       <FooterAstroComponent meta_title={meta_title} meta_author={meta_author}/>
 
-      <a href="#top" class="btn btn-accent btn-top">
+      <LinkAstroComponent href="#top" className="btn-accent btn-top">
         <i class="fa-solid fa-chevron-up"></i>
         Top
-      </a>
+      </LinkAstroComponent>
 
       <JokesModalAstroComponent />
       <ImageModalAstroComponent />
