@@ -215,6 +215,7 @@ a.card-featured {
   --btn-group-gap: 0;
 
   display: inline-flex;
+  flex-wrap: wrap;
   gap: var(--btn-group-gap);
   box-shadow: var(--btn-group-shadow);
 
@@ -239,7 +240,7 @@ a.card-featured {
 .btn-group-project-categories {
   --btn-group-shadow: none;
   --btn-group-clr-border: transparent;
-  --btn-group-gap: var(--size-r-400);
+  --btn-group-gap: var(--r-size-200);
 
   .btn {
     --btn-border-radius: var(--r-size-50);
