@@ -16,7 +16,7 @@ const response = await fetch(`${import.meta.env.API_URL}misc/messageTypes/${impo
 const data = await response.json()
 const { messageTypes } = data
 
-const projectPosts = await Astro.glob("./projects/*/*.md")
+const projectPosts = await Astro.glob("./projects/*.md")
 const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured), "date")
 ---
 <MainAstroLayout>

@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "CSS Button Animations"
 subtitle: "CSS Animation"
 date: "2022-01-24"

@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Cut Corners Button"
 subtitle: "CSS Animation"
 date: "2022-08-19"

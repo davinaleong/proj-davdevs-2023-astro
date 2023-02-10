@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Resume"
 name: "Davina Leong"
 profilePic: "./../styles/images/profile-pic.png"
 subtitle: "Web Developer, 7 years"

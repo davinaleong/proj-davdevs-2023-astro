@@ -97,15 +97,15 @@ const modalJokesEl = document.querySelector(`[data-element="modal-jokes"]`)
 
 btnHeaderJokeMobileEl.addEventListener(`click`, (e) => {
   e.preventDefault()
-  modalJokesEl.setAttribute(ariaExpandedAttr, true)
+  getJoke(modalJokesEl)
 })
 btnHeaderJokeEl.addEventListener(`click`, (e) => {
   e.preventDefault()
-  modalJokesEl.setAttribute(ariaExpandedAttr, true)
+  getJoke(modalJokesEl)
 })
 btnFooterJokeEl.addEventListener(`click`, (e) => {
   e.preventDefault()
-  modalJokesEl.setAttribute(ariaExpandedAttr, true)
+  getJoke(modalJokesEl)
 })
 
 
@@ -139,6 +139,26 @@ formEls.forEach(formEl => {
 
 
 // Functions
+async function getJoke(modalEl) {
+  console.log(`fn: getJoke`)
+
+  const modalBodyEl = modalEl.querySelector(`[data-element="modal-body"]`)
+  modalBodyEl.innerHTML = ``
+
+  try {
+    const response = await fetch(`https://davinas-cms.herokuapp.com/api/davdevs/jokes/random`)
+    const data = await response.json()
+    const { joke } = data
+
+    if (joke && joke.text) {
+      modalBodyEl.innerHTML = `<p>${joke.text.replace(/(?:\r\n|\r|\n)/g, '<br/>')}</p>`
+      modalEl.setAttribute(ariaExpandedAttr, true)
+    }
+  } catch(error) {
+    console.error(error)
+  }
+}
+
 async function postFormDataAsJson(url, formData) {
   const plainFormData = Object.fromEntries(formData.entries())
   const formDataJsonString = JSON.stringify(plainFormData)

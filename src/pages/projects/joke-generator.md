@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Joke Generator"
 subtitle: "JavaScript Demo"
 date: "2022-11-10"

@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Pokemon Teams Template"
 subtitle: "HTML Template"
 date: "2020-01-16"

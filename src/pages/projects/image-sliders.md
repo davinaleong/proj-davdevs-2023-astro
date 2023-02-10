@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Image Sliders"
 subtitle: "JavaScript Demo"
 date: "2022-12-08"

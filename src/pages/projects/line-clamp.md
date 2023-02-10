@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Line Clamp"
 subtitle: "CSS Demo"
 date: "2022-11-11"
