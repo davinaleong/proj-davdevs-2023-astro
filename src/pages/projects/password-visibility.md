@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../project-item.astro"
 title: "Password Visibility"
 subtitle: "JavaScript Demo"
 date: "2022-10-07"

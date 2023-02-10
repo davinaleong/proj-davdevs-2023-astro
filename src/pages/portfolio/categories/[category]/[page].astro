@@ -9,7 +9,7 @@ export async function getStaticPaths({ paginate }: any) {
     (category: any) => !category.draft
   )
 
-  const projectPages = await Astro.glob("./../../../projects/*/*.md")
+  const projectPages = await Astro.glob("./../../../projects/*.md")
 
   return publishedCategories.map(({ slug }: any) => {
     const projects = sortPostsDesc(projectPages.filter((post) => !post.frontmatter.draft && post.frontmatter.category === slug), "date")

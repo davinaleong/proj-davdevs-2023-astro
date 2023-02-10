@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../project-item.astro"
 title: "Bible API"
 subtitle: "Laravel CMS + API"
 date: "2021-02-27"

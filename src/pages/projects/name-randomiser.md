@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../project-item.astro"
 title: "Name Processor"
 subtitle: "JS Tool"
 date: "2021-11-20"

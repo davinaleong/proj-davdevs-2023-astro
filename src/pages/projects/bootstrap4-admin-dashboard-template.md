@@ -1,5 +1,5 @@
 ---
-layout: "./../../project-item.astro"
+layout: "./../project-item.astro"
 title: "Bootstrap 4 Admin Dashboard Template"
 subtitle: "Bootstrap 4 Template"
 date: "2022-08-19"
