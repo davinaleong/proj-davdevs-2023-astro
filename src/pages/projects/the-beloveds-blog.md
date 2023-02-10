@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "The Beloved's Blog"
 subtitle: "React App"
 date: "2022-04-20"

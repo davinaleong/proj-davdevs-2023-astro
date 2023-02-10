@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Glass Website"
 subtitle: "Static Website"
 date: "2022-07-27"

@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Comphanny Template"
 subtitle: "Bootstrap 4 Template"
 date: "2020-01-16"

@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Dav/Devs"
 subtitle: "Astro App"
 date: "2020-01-16"

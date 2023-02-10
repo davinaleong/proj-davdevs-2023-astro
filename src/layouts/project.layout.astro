@@ -14,7 +14,7 @@ const { categories } = main.frontmatter
 const { frontmatter } = Astro.props
 const { title, subtitle, date, description, keywords, category, image, link, repo, technologies } = frontmatter
 
-const projectPosts = await Astro.glob("./projects/*.md")
+const projectPosts = await Astro.glob("./../pages/projects/*.md")
 const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.draft && post.frontmatter.featured), "date")
 const formattedDate = dayjs(date).format(import.meta.env.DATE_FORMAT)
 const selectedCategory = categories.filter((cat: any) => cat.slug.toLowerCase() === category.toLowerCase())[0]

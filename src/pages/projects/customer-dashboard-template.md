@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Customer Dashboard Template"
 subtitle: "JS Web App"
 date: "2021-02-27"

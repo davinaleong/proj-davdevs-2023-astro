@@ -1,5 +1,5 @@
 ---
-layout: "./../project-item.astro"
+layout: "./../../layouts/project.layout.astro"
 title: "Frontend Mentor Demo Collection"
 subtitle: "HTML Microsite"
 date: "2022-09-20"

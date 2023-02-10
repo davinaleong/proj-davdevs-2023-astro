@@ -1,4 +1,5 @@
 ---
+title: "Home"
 linkedinLink: "https://www.linkedin.com/in/davina-leong-s9115675g/"
 githubLink: "https://github.com/davinaleong"
 devLink: "https://dev.to/davinaleong"
