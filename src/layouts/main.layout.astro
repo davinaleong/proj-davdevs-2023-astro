@@ -8,6 +8,8 @@ import JokesModalAstroComponent from "./../components/jokes-modal.component.astr
 import ImageModalAstroComponent from "./../components/image-modal.component.astro"
 import LinkAstroComponent from "./../components/link.component.astro"
 
+const grecaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY
+
 const response = await fetch(`${import.meta.env.API_URL}misc/apps/${import.meta.env.PUBLIC_APP_SLUG
 }`)
 const data = await response.json()
@@ -65,6 +67,7 @@ if (title) {
       src="https://kit.fontawesome.com/1b82ea5cb2.js"
       crossorigin="anonymous"
     ></script>
+    <script is:inline src={`https://www.google.com/recaptcha/api.js?render=${grecaptchaSiteKey}`}></script>
   </head>
   <body id="top" class={className}>
     <LinkAstroComponent href="#main" className="btn-accent btn-skip-navigation">

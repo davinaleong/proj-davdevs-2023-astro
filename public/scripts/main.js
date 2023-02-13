@@ -133,6 +133,17 @@ imgEls.forEach(imgEl => {
 const formEls = document.querySelectorAll(`form[method="post"]`)
 formEls.forEach(formEl => {
   resetForm(formEl)
+
+  const grecaptchaSiteKey = formEl.getAttribute(`data-grecaptcha`)
+
+  if (grecaptchaSiteKey && grecaptcha) {
+    grecaptcha.ready(function() {
+      grecaptcha.execute(grecaptchaSiteKey, {action: 'submit'}).then(function(token) {
+        formEl.querySelector(`input[name="g_token"]`).value = token
+      })
+    })
+  }
+
   formEl.addEventListener(`submit`, (event) => formSubmitHandler(formEl, event, `Thank you for inquiry. We will get back to you within a few days!`))
 })
 
@@ -182,10 +193,9 @@ async function formSubmitHandler(formEl, event, successMessage = ``) {
   event.preventDefault()
   disableForm(formEl, true)
   setFormStatusHtml(formEl)
-
+  
   const form = event.currentTarget
   const url = form.action
-  console.log(`action`, url)
 
   try {
     const formData = new FormData(form)

@@ -12,6 +12,8 @@ import logo from "./../styles/images/logo-512x512.png"
 import * as main from "./../content/index/main.md"
 const { contactAction, categories, skills, additionalContent } = main.frontmatter
 
+const grecaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY
+
 const response = await fetch(`${import.meta.env.API_URL}misc/messageTypes/${import.meta.env.PUBLIC_APP_SLUG}/`)
 const data = await response.json()
 const { messageTypes } = data
@@ -126,7 +128,9 @@ const projects = sortPostsDesc(projectPosts.filter((post) => !post.frontmatter.d
 				Any Enquires?
 			</h2>
 
-			<form action={contactAction} method="post" class="form-grid" data-element="form-contact">
+			<form action={contactAction} method="post" class="form-grid" data-element="form-contact" data-grecaptcha={grecaptchaSiteKey}>
+				<input type="hidden" name="g_token" id="g_token" value="" required>
+
 				<div class="form-group form-cell-half">
 					<label for="name" class="visually-hidden">Name</label>
 					<div class="input-group">
