@@ -133,17 +133,6 @@ imgEls.forEach(imgEl => {
 const formEls = document.querySelectorAll(`form[method="post"]`)
 formEls.forEach(formEl => {
   resetForm(formEl)
-
-  const grecaptchaSiteKey = formEl.getAttribute(`data-grecaptcha`)
-
-  if (grecaptchaSiteKey && grecaptcha) {
-    grecaptcha.ready(function() {
-      grecaptcha.execute(grecaptchaSiteKey, {action: 'submit'}).then(function(token) {
-        formEl.querySelector(`input[name="g_token"]`).value = token
-      })
-    })
-  }
-
   formEl.addEventListener(`submit`, (event) => formSubmitHandler(formEl, event, `Thank you for inquiry. We will get back to you within a few days!`))
 })
 
