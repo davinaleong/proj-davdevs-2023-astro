@@ -182,10 +182,9 @@ async function formSubmitHandler(formEl, event, successMessage = ``) {
   event.preventDefault()
   disableForm(formEl, true)
   setFormStatusHtml(formEl)
-
+  
   const form = event.currentTarget
   const url = form.action
-  console.log(`action`, url)
 
   try {
     const formData = new FormData(form)

@@ -4,7 +4,7 @@ linkedinLink: "https://www.linkedin.com/in/davina-leong-s9115675g/"
 githubLink: "https://github.com/davinaleong"
 devLink: "https://dev.to/davinaleong"
 jsfiddleLink: "https://jsfiddle.net/user/davinaleong/fiddles/"
-contactAction: "https://davinas-cms.herokuapp.com/api/misc/messages/davdevs"
+contactAction: "https://proj-davinas-cms.test//api/misc/messages/davdevs"
 categories:
   [
     {

@@ -209,6 +209,12 @@
   }
 }
 
+@each $key, $value in $displays {
+  .display-#{$key} {
+    display: $value;
+  }
+}
+
 @each $key, $value in $sizes {
   .m-#{$key} {
     margin-left: $value;
