@@ -14,11 +14,11 @@ let theStart = start
 let theEnd = end
 
 if (theStart !== "Present") {
-  theStart = dayjs(theStart).format("DD MMM")
+  theStart = dayjs(theStart).format("MMM YYYY")
 }
 
 if (theEnd && theEnd !== "Present") {
-  theEnd = dayjs(theEnd).format("DD MMM")
+  theEnd = dayjs(theEnd).format("MMM YYYY")
 }
 
 let period = theStart
