@@ -97,7 +97,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
   <div class="divider bg-gray-400"></div>
 
   <section id="skills" class="section section-white section-no-decoration">
-    <div class="container section-inner | ta-center">
+    <div class="container section-inner |">
       <h2 class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200">
         Skills
       </h2>
@@ -105,7 +105,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
       {skills.map(({frontmatter, Content}: any) => (
         <>
           <p class="m-b-50"><strong>{frontmatter.title}</strong></p>
-          <div class="fsize-300 m-b-400 restrict-width">
+          <div class="fsize-300 m-b-400">
             <Content />
           </div>
         </>
@@ -118,7 +118,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
   <section id="experience" class="section section-white section-no-decoration">
     <div class="container section-inner">
       <h2
-        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200 ta-center"
+        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200"
       >
         Experience
       </h2>
@@ -134,7 +134,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
   <section id="education" class="section section-white section-no-decoration">
     <div class="container section-inner">
       <h2
-        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200 ta-center"
+        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200"
       >
         Education
       </h2>
@@ -153,7 +153,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
   >
     <div class="container section-inner">
       <h2
-        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200 ta-center"
+        class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200"
       >
         Certificates
       </h2>
@@ -170,7 +170,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
     id="hobbies"
     class="section section-white section-no-decoration m-b-600"
   >
-    <div class="container section-inner ta-center">
+    <div class="container section-inner">
       <h2 class="ff-secondary clr-lime-800 fsize-600 fw-medium m-b-200">
         Hobbies
       </h2>
