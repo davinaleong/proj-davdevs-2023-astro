@@ -9,7 +9,7 @@ category: "react"
 image: "the-beloveds-blog.png"
 link: "https://the-beloveds-blog.com/"
 repo: "https://github.com/davinaleong/proj-the-beloveds-blog-2023"
-featured: true
+featured: false
 technologies:
   [
     {

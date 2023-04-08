@@ -9,7 +9,7 @@ category: "javascript"
 image: "password-visibility.png"
 link: "https://davinaleong.github.io/password-visibility/"
 repo: "https://github.com/davinaleong/proj-password-visibility"
-featured: true
+featured: false
 technologies:
   [
     { label: "Frontend", items: ["HTML", "CSS", "JavaScript"] },

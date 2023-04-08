@@ -9,7 +9,7 @@ category: "html"
 image: "fem-projects.jpg"
 link: "https://davinaleong.github.io/proj-dav-fem/"
 repo: ""
-featured: true
+featured: false
 technologies:
   [
     {

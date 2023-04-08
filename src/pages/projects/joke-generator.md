@@ -9,7 +9,7 @@ category: "javascript"
 image: "joke-generator.png"
 link: "https://davinaleong.github.io/proj-joke-of-the-day/"
 repo: ""
-featured: true
+featured: false
 technologies:
   [
     { label: "Frontend", items: ["HTML", "CSS", "JavaScript"] },
