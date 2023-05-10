@@ -9,7 +9,7 @@ category: "react"
 image: "proverbs-everyday.png"
 link: "https://proverbs-everyday-v2.netlify.app/"
 repo: "https://github.com/davinaleong/proj-proverbs-everyday-2-app"
-featured: true
+featured: false
 technologies:
   [
     {
