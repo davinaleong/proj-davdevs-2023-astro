@@ -1,0 +1,380 @@
+// F. Utilities
+
+@each $key, $value in $positions {
+  .position-#{$key} {
+    position: $value;
+  }
+}
+
+@each $key, $value in $displays {
+  .d-#{$key} {
+    display: $value;
+  }
+}
+
+@each $key, $value in $align-items {
+  .ai-#{$key} {
+    align-items: $value;
+  }
+}
+
+@each $key, $value in $justify-contents {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key, $value in $justify-items {
+  .ji-#{$key} {
+    justify-items: $value;
+  }
+}
+
+@each $color-key, $color-value in $colors {
+  @each $level-key, $level-value in $color-value {
+    .clr-#{$color-key}-#{$level-key} {
+      color: $level-value;
+    }
+
+    .bg-#{$color-key}-#{$level-key} {
+      background-color: $level-value;
+    }
+
+    .border-#{$color-key}-#{$level-key} {
+      border-left: thin solid $level-value;
+      border-right: thin solid $level-value;
+      border-top: thin solid $level-value;
+      border-bottom: thin solid $level-value;
+    }
+
+    .border-x-#{$color-key}-#{$level-key} {
+      border-left: thin solid $level-value;
+      border-right: thin solid $level-value;
+    }
+
+    .border-y-#{$color-key}-#{$level-key} {
+      border-top: thin solid $level-value;
+      border-bottom: thin solid $level-value;
+    }
+
+    .border-l-#{$color-key}-#{$level-key} {
+      border-left: thin solid $level-value;
+    }
+
+    .border-r-#{$color-key}-#{$level-key} {
+      border-right: thin solid $level-value;
+    }
+
+    .border-t-#{$color-key}-#{$level-key} {
+      border-top: thin solid $level-value;
+    }
+
+    .border-b-#{$color-key}-#{$level-key} {
+      border-bottom: thin solid $level-value;
+    }
+  }
+}
+
+.clr-transparent {
+  color: transparent;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.border-none {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.border-x-none {
+  border-left: none;
+  border-right: none;
+}
+
+.border-y-none {
+  border-top: none;
+  border-bottom: none;
+}
+
+.border-l-none {
+  border-left: none;
+}
+
+.border-r-none {
+  border-right: none;
+}
+
+.border-t-none {
+  border-top: none;
+}
+
+.border-b-none {
+  border-bottom: none;
+}
+
+.border-transparent {
+  border-left: thin solid transparent;
+  border-right: thin solid transparent;
+  border-top: thin solid transparent;
+  border-bottom: thin solid transparent;
+}
+
+.border-x-transparent {
+  border-left: thin solid transparent;
+  border-right: thin solid transparent;
+}
+
+.border-y-transparent {
+  border-top: thin solid transparent;
+  border-bottom: thin solid transparent;
+}
+
+.border-l-transparent {
+  border-left: thin solid transparent;
+}
+
+.border-r-transparent {
+  border-right: thin solid transparent;
+}
+
+.border-t-transparent {
+  border-top: thin solid transparent;
+}
+
+.border-b-transparent {
+  border-bottom: thin solid transparent;
+}
+
+@each $key, $value in $families {
+  .ff-#{$key} {
+    font-family: $value;
+  }
+}
+
+@each $key, $value in $fsizes {
+  .fsize-#{$key} {
+    font-size: $value;
+  }
+}
+
+@each $key, $value in $weights {
+  .fw-#{$key} {
+    font-weight: $value;
+  }
+}
+
+@each $key, $value in $styles {
+  .fs-#{$key} {
+    font-style: $value;
+  }
+}
+
+@each $key, $value in $decorations {
+  .td-#{$key} {
+    text-decoration: $value;
+  }
+}
+
+@each $key, $value in $transforms {
+  .tt-#{$key} {
+    text-transform: $value;
+  }
+}
+
+@each $key, $value in $aligns {
+  .ta-#{$key} {
+    text-align: $value;
+  }
+}
+
+@each $key, $value in $letter-spacings {
+  .ls-#{$key} {
+    letter-spacing: $value;
+  }
+}
+
+@each $key, $value in $line-heights {
+  .lh-#{$key} {
+    letter-spacing: $value;
+  }
+}
+
+@each $key, $value in $box-shadows {
+  .shadow-#{$key} {
+    box-shadow: $value;
+  }
+}
+
+@each $key, $value in $displays {
+  .display-#{$key} {
+    display: $value;
+  }
+}
+
+@each $key, $value in $sizes {
+  .m-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .m-x-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .m-y-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .m-l-#{$key} {
+    margin-left: $value;
+  }
+
+  .m-r-#{$key} {
+    margin-right: $value;
+  }
+
+  .m-t-#{$key} {
+    margin-top: $value;
+  }
+
+  .m-b-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .p-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .p-x-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .p-y-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .p-l-#{$key} {
+    padding-left: $value;
+  }
+
+  .p-r-#{$key} {
+    padding-right: $value;
+  }
+
+  .p-t-#{$key} {
+    padding-top: $value;
+  }
+
+  .p-b-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .br-#{$key} {
+    border-radius: $value;
+  }
+}
+
+@each $key, $value in $r-sizes {
+  .m-r-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .m-r-x-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .m-r-y-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .m-r-l-#{$key} {
+    margin-left: $value;
+  }
+
+  .m-r-r-#{$key} {
+    margin-right: $value;
+  }
+
+  .m-r-t-#{$key} {
+    margin-top: $value;
+  }
+
+  .m-r-b-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .p-r-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .p-r-x-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .p-r-y-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .p-r-l-#{$key} {
+    padding-left: $value;
+  }
+
+  .p-r-r-#{$key} {
+    padding-right: $value;
+  }
+
+  .p-r-t-#{$key} {
+    padding-top: $value;
+  }
+
+  .p-r-b-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .br-r-#{$key} {
+    border-radius: $value;
+  }
+}
+
+.br-pill {
+  border-radius: 100vmax;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

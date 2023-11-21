@@ -1,0 +1,67 @@
+.modal {
+  $modal-bg-clr: $clr-gray-900;
+
+  position: fixed;
+  inset: 0;
+  background-color: hsla(
+    hue($modal-bg-clr),
+    saturation($modal-bg-clr),
+    lightness($modal-bg-clr),
+    0.8
+  );
+  padding: var(--r-size-400);
+  z-index: 10;
+  display: none;
+  place-items: center;
+  overflow-y: auto;
+
+  &[aria-expanded="true"] {
+    display: grid;
+  }
+}
+
+.modal-dialog {
+  --modal-dialog-clr: var(--clr-gray-900);
+  --modal-dialog-clr-bg: var(--clr-primary-200);
+  --modal-dialog-padding: var(--r-size-400);
+
+  min-width: 50ch;
+  max-width: 75ch;
+  color: var(--modal-dialog-clr);
+  background-color: var(--modal-dialog-clr-bg);
+  box-shadow: box-shadow(400);
+  position: relative;
+  padding: var(--modal-dialog-padding);
+
+  &__header {
+    padding: var(--r-size-200);
+  }
+
+  &__body {
+    padding: var(--r-size-200);
+
+    p:not(:last-child) {
+      margin-bottom: var(--r-size-200);
+    }
+  }
+
+  &__footer {
+    padding: var(--r-size-200);
+  }
+}
+
+[data-element="modal-image"] .modal-dialog {
+  max-width: 120ch;
+}
+
+[data-element="modal-close"] {
+  position: absolute;
+  top: var(--r-size-200);
+  right: var(--r-size-200);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:where(:hover) {
+    color: var(--clr-accent-2-500);
+  }
+}
